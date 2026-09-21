@@ -1,4 +1,3 @@
-import { useScrollVelocity } from "../../hooks/useScrollVelocity";
 
 interface VelocityHeadingProps {
   subtitle?: string;
@@ -15,14 +14,9 @@ export function VelocityHeading({
   description,
   align = "left",
 }: VelocityHeadingProps) {
-  const velocity = useScrollVelocity();
-
-  // Dynamic skew: clamped between -12 and 12 degrees
-  const skewX = Math.max(-12, Math.min(12, velocity * -0.4));
-  const skewY = Math.max(-4, Math.min(4, velocity * -0.1));
-
   return (
     <div
+      data-scroll
       style={{
         textAlign: align,
         marginBottom: "3.5rem",
@@ -35,7 +29,7 @@ export function VelocityHeading({
             display: "inline-flex",
             alignItems: "center",
             gap: "0.5rem",
-            color: "var(--accent-cyan)",
+            color: "var(--accent)",
             fontSize: "var(--text-xs)",
             fontFamily: "var(--font-mono)",
             letterSpacing: "0.15em",
@@ -43,15 +37,13 @@ export function VelocityHeading({
             marginBottom: "0.75rem",
           }}
         >
-          <span style={{ width: "18px", height: "1px", background: "var(--accent-cyan)" }} />
+          <span style={{ width: "18px", height: "1px", background: "var(--accent)" }} />
           {subtitle}
         </div>
       )}
 
       <h2
-        className="velocity-skew-wrap"
         style={{
-          transform: `skewX(${skewX}deg) skewY(${skewY}deg)`,
           fontSize: "var(--text-3xl)",
           fontWeight: 800,
           letterSpacing: "-0.03em",
@@ -64,10 +56,9 @@ export function VelocityHeading({
         {highlight && (
           <span
             style={{
-              background: "linear-gradient(135deg, #00f0ff 0%, #38bdf8 50%, #818cf8 100%)",
+              background: "linear-gradient(135deg, #ff6a3d 0%, #e8c872 50%, #d9a05b 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              filter: "drop-shadow(0 0 20px rgba(0, 240, 255, 0.4))",
             }}
           >
             {highlight}

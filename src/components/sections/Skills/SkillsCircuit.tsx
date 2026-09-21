@@ -16,6 +16,7 @@ export function SkillsCircuit() {
     if (!section || !path) return;
 
     const pathLength = path.getTotalLength();
+    let lastCount = -1;
 
     // Set initial dash array to full length and offset to full length
     gsap.set(path, {
@@ -27,7 +28,7 @@ export function SkillsCircuit() {
       trigger: section,
       start: "top 75%",
       end: "bottom 30%",
-      scrub: 0.8,
+      scrub: true,
       onUpdate: (self) => {
         const progress = self.progress;
         // Draw the path
@@ -36,13 +37,12 @@ export function SkillsCircuit() {
 
         // Calculate which category nodes are active based on scroll progress
         const count = skillsData.categories.length;
-        const currentActive: number[] = [];
-        for (let i = 0; i < count; i++) {
-          if (progress >= (i + 0.1) / count) {
-            currentActive.push(i);
-          }
+        let activeCount = 0;
+        while (activeCount < count && progress >= (activeCount + 0.1) / count) activeCount++;
+        if (activeCount !== lastCount) {
+          lastCount = activeCount;
+          setActiveNodes(Array.from({ length: activeCount }, (_, i) => i));
         }
-        setActiveNodes(currentActive);
       },
     });
 
@@ -54,17 +54,17 @@ export function SkillsCircuit() {
   const getCategoryIcon = (id: string) => {
     switch (id) {
       case "languages":
-        return <Terminal size={20} color="#00f0ff" />;
+        return <Terminal size={20} color="#ff6a3d" />;
       case "web-frameworks":
-        return <Cpu size={20} color="#38bdf8" />;
+        return <Cpu size={20} color="#e8c872" />;
       case "databases-cloud":
-        return <Database size={20} color="#818cf8" />;
+        return <Database size={20} color="#d9a05b" />;
       case "tools-ecosystem":
-        return <Wrench size={20} color="#a78bfa" />;
+        return <Wrench size={20} color="#c98a5a" />;
       case "executive-leadership":
         return <Sparkles size={20} color="#f59e0b" />;
       default:
-        return <Cpu size={20} color="#00f0ff" />;
+        return <Cpu size={20} color="#ff6a3d" />;
     }
   };
 
@@ -153,13 +153,13 @@ export function SkillsCircuit() {
                       padding: "2rem",
                       borderRadius: "var(--radius-lg)",
                       background: isActive
-                        ? "rgba(17, 24, 38, 0.92)"
-                        : "rgba(11, 15, 23, 0.75)",
+                        ? "rgba(23, 21, 19, 0.92)"
+                        : "rgba(14, 13, 12, 0.75)",
                       border: isActive
-                        ? "1px solid rgba(0, 240, 255, 0.45)"
+                        ? "1px solid rgba(255, 106, 61, 0.45)"
                         : "1px solid var(--border-subtle)",
                       boxShadow: isActive
-                        ? "0 12px 35px rgba(0, 240, 255, 0.15)"
+                        ? "0 12px 35px rgba(255, 106, 61, 0.15)"
                         : "var(--shadow-subtle)",
                       transform: isActive ? "scale(1.01)" : "scale(0.99)",
                       transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -181,9 +181,9 @@ export function SkillsCircuit() {
                             height: "38px",
                             borderRadius: "10px",
                             background: isActive
-                              ? "rgba(0, 240, 255, 0.12)"
+                              ? "rgba(255, 106, 61, 0.12)"
                               : "rgba(255, 255, 255, 0.04)",
-                            border: `1px solid ${isActive ? "rgba(0, 240, 255, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
+                            border: `1px solid ${isActive ? "rgba(255, 106, 61, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -209,8 +209,8 @@ export function SkillsCircuit() {
                         style={{
                           fontFamily: "var(--font-mono)",
                           fontSize: "0.7rem",
-                          color: isActive ? "var(--accent-cyan)" : "var(--text-muted)",
-                          border: `1px solid ${isActive ? "rgba(0, 240, 255, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
+                          color: isActive ? "var(--accent)" : "var(--text-muted)",
+                          border: `1px solid ${isActive ? "rgba(255, 106, 61, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
                           padding: "0.2rem 0.55rem",
                           borderRadius: "var(--radius-full)",
                           transition: "color 0.3s",
@@ -238,10 +238,10 @@ export function SkillsCircuit() {
                             padding: "0.4rem 0.85rem",
                             borderRadius: "var(--radius-md)",
                             background: isActive
-                              ? "rgba(0, 240, 255, 0.06)"
+                              ? "rgba(255, 106, 61, 0.06)"
                               : "rgba(255, 255, 255, 0.02)",
                             border: isActive
-                              ? "1px solid rgba(0, 240, 255, 0.2)"
+                              ? "1px solid rgba(255, 106, 61, 0.2)"
                               : "1px solid var(--border-subtle)",
                             fontSize: "var(--text-sm)",
                             fontWeight: 500,
@@ -254,7 +254,7 @@ export function SkillsCircuit() {
                               width: "5px",
                               height: "5px",
                               borderRadius: "50%",
-                              background: isActive ? "var(--accent-cyan)" : "var(--text-muted)",
+                              background: isActive ? "var(--accent)" : "var(--text-muted)",
                             }}
                           />
                           {skill}

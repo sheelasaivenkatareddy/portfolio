@@ -1,62 +1,15 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import experienceData from "../../../data/experience.json";
 import { VelocityHeading } from "../../common/VelocityHeading";
 import { Calendar, MapPin, CheckCircle2, Award } from "lucide-react";
 
 export function ExperienceTimeline() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const track = trackRef.current;
-    if (!section || !track) return;
-
-    // Match media for responsive pinning
-    const mm = gsap.matchMedia();
-
-    mm.add("(min-width: 900px)", () => {
-      // Calculate total horizontal scroll distance needed
-      const scrollDistance = track.scrollWidth - window.innerWidth + 120;
-
-      const trigger = ScrollTrigger.create({
-        trigger: section,
-        pin: true,
-        scrub: 1.1,
-        start: "top top",
-        end: () => `+=${scrollDistance}`,
-        anticipatePin: 1,
-        onUpdate: (self) => {
-          const x = -self.progress * scrollDistance;
-          gsap.set(track, { x });
-        },
-      });
-
-      return () => {
-        trigger.kill();
-      };
-    });
-
-    return () => {
-      mm.revert();
-    };
-  }, []);
-
   return (
     <section
       id="experience-section"
-      ref={sectionRef}
+      className="section-spacer"
       style={{
         position: "relative",
-        minHeight: "100vh",
-        background: "radial-gradient(ellipse at 50% 50%, rgba(18, 26, 42, 0.6) 0%, #0b0f17 100%)",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        overflow: "hidden",
-        padding: "6rem 0",
+        background: "radial-gradient(ellipse at 50% 50%, rgba(28, 24, 20, 0.6) 0%, #0e0d0c 100%)",
       }}
     >
       <div className="section-container" style={{ width: "100%", marginBottom: "1.5rem" }}>
@@ -68,35 +21,27 @@ export function ExperienceTimeline() {
         />
       </div>
 
-      {/* Horizontal Camera Track */}
-      <div
-        style={{
-          width: "100%",
-          overflow: "visible",
-          position: "relative",
-        }}
-      >
+      {/* Stacked experience cards: every card is fully visible in normal page flow */}
+      <div className="section-container">
         <div
-          ref={trackRef}
+          className="experience-grid"
           style={{
-            display: "flex",
-            gap: "2.5rem",
-            paddingLeft: "calc(max(2rem, (100vw - 1280px) / 2))",
-            paddingRight: "6rem",
-            willChange: "transform",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(520px, 100%), 1fr))",
+            gap: "2rem",
+            alignItems: "stretch",
           }}
-          className="experience-track"
         >
           {experienceData.map((exp, idx) => (
             <div
               key={exp.id}
-              className="glass-panel gpu-layer"
+              data-scroll
+              className="glass-panel"
               style={{
-                flex: "0 0 min(680px, 85vw)",
                 padding: "2.5rem",
                 borderRadius: "var(--radius-xl)",
-                background: "rgba(17, 22, 34, 0.88)",
-                border: "1px solid rgba(38, 44, 54, 0.9)",
+                background: "rgba(23, 21, 19, 0.88)",
+                border: "1px solid rgba(42, 38, 34, 0.9)",
                 boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
                 display: "flex",
                 flexDirection: "column",
@@ -114,8 +59,8 @@ export function ExperienceTimeline() {
                   height: "2px",
                   background:
                     idx === 0
-                      ? "linear-gradient(90deg, #00f0ff, #38bdf8, transparent)"
-                      : "linear-gradient(90deg, #818cf8, #a78bfa, transparent)",
+                      ? "linear-gradient(90deg, #ff6a3d, #e8c872, transparent)"
+                      : "linear-gradient(90deg, #d9a05b, #c98a5a, transparent)",
                 }}
               />
 
@@ -153,7 +98,7 @@ export function ExperienceTimeline() {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.4rem",
-                        color: "var(--accent-cyan)",
+                        color: "var(--accent)",
                         fontFamily: "var(--font-mono)",
                         fontSize: "var(--text-xs)",
                         fontWeight: 600,
@@ -184,7 +129,7 @@ export function ExperienceTimeline() {
                   style={{
                     fontSize: "var(--text-base)",
                     fontWeight: 600,
-                    color: "var(--accent-sky)",
+                    color: "var(--accent-secondary)",
                     marginBottom: "0.85rem",
                   }}
                 >
@@ -198,7 +143,7 @@ export function ExperienceTimeline() {
                     color: "var(--text-secondary)",
                     fontStyle: "italic",
                     marginBottom: "1.5rem",
-                    borderLeft: "2px solid var(--accent-cyan)",
+                    borderLeft: "2px solid var(--accent)",
                     paddingLeft: "0.75rem",
                   }}
                 >
@@ -221,7 +166,7 @@ export function ExperienceTimeline() {
                     >
                       <CheckCircle2
                         size={16}
-                        color="#00f0ff"
+                        color="#ff6a3d"
                         style={{ flexShrink: 0, marginTop: "0.2rem" }}
                       />
                       <span>{item}</span>
@@ -249,7 +194,7 @@ export function ExperienceTimeline() {
                       style={{
                         fontSize: "var(--text-lg)",
                         fontWeight: 800,
-                        color: "var(--accent-cyan)",
+                        color: "var(--accent)",
                         fontFamily: "var(--font-mono)",
                       }}
                     >
@@ -290,13 +235,14 @@ export function ExperienceTimeline() {
 
           {/* Closing Milestone Card */}
           <div
-            className="glass-panel gpu-layer"
+            data-scroll
+            className="glass-panel"
             style={{
-              flex: "0 0 min(420px, 80vw)",
+              gridColumn: "1 / -1",
               padding: "2.5rem",
               borderRadius: "var(--radius-xl)",
-              background: "rgba(17, 22, 34, 0.6)",
-              border: "1px dashed rgba(0, 240, 255, 0.3)",
+              background: "rgba(23, 21, 19, 0.6)",
+              border: "1px dashed rgba(255, 106, 61, 0.3)",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -304,7 +250,7 @@ export function ExperienceTimeline() {
               textAlign: "center",
             }}
           >
-            <Award size={42} color="#00f0ff" style={{ marginBottom: "1.25rem" }} />
+            <Award size={42} color="#ff6a3d" style={{ marginBottom: "1.25rem" }} />
             <h4
               style={{
                 fontSize: "var(--text-lg)",

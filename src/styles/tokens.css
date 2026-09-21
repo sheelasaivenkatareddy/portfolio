@@ -1,25 +1,26 @@
 :root {
-  /* Color Palette - Apple Dark Minimalist + Electric Cyan */
-  --bg-primary: #0b0f17;
-  --bg-surface: rgba(17, 22, 34, 0.75);
-  --bg-surface-elevated: rgba(23, 30, 46, 0.85);
-  --bg-card: #111622;
-  --bg-card-hover: #161d2d;
+  /* Color Palette - Ember: warm black + orange accent */
+  --bg-primary: #0e0d0c;
+  --bg-surface: rgba(23, 21, 19, 0.75);
+  --bg-surface-elevated: rgba(30, 27, 24, 0.85);
+  --bg-card: #171513;
+  --bg-card-hover: #1e1b18;
   
-  --border-subtle: #262c36;
-  --border-active: rgba(0, 240, 255, 0.45);
+  --border-subtle: #2a2622;
+  --border-active: rgba(255, 106, 61, 0.45);
   --border-highlight: rgba(255, 255, 255, 0.12);
 
-  --accent-cyan: #00f0ff;
-  --accent-sky: #38bdf8;
+  --accent: #ff6a3d;
+  --accent-secondary: #e8c872;
   --accent-emerald: #10b981;
-  --accent-glow: 0 0 24px rgba(0, 240, 255, 0.35);
-  --accent-glow-sm: 0 0 12px rgba(0, 240, 255, 0.25);
+  --accent-rgb: 255, 106, 61;
+  --accent-glow: 0 0 24px rgba(255, 106, 61, 0.35);
+  --accent-glow-sm: 0 0 12px rgba(255, 106, 61, 0.25);
   
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-inverse: #0b0f17;
+  --text-primary: #f5f1ea;
+  --text-secondary: #a8a196;
+  --text-muted: #8c857a; /* ~5.4:1 on --bg-primary, passes AA */
+  --text-inverse: #0e0d0c;
 
   /* Typography */
   --font-sans: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
@@ -44,7 +45,7 @@
 
   --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
   --shadow-deep: 0 16px 40px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 8px 32px rgba(0, 240, 255, 0.15);
+  --shadow-glow: 0 8px 32px rgba(255, 106, 61, 0.15);
 
   --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);

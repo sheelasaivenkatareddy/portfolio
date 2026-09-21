@@ -21,9 +21,9 @@ export function HeaderHUD() {
           left: 0,
           width: `${progress * 100}%`,
           height: "3px",
-          background: "linear-gradient(90deg, #00f0ff, #38bdf8, #818cf8)",
+          background: "linear-gradient(90deg, #ff6a3d, #e8c872, #d9a05b)",
           zIndex: 100,
-          boxShadow: "0 0 12px rgba(0, 240, 255, 0.8)",
+          boxShadow: "0 0 12px rgba(255, 106, 61, 0.8)",
           transition: "width 0.05s linear",
         }}
       />
@@ -48,7 +48,7 @@ export function HeaderHUD() {
             justifyContent: "space-between",
             padding: "0.75rem 1.5rem",
             borderRadius: "var(--radius-full)",
-            background: "rgba(11, 15, 23, 0.82)",
+            background: "rgba(14, 13, 12, 0.82)",
             border: "1px solid rgba(255, 255, 255, 0.1)",
           }}
         >
@@ -62,14 +62,14 @@ export function HeaderHUD() {
                 width: "32px",
                 height: "32px",
                 borderRadius: "50%",
-                background: "linear-gradient(135deg, #00f0ff, #0284c7)",
+                background: "linear-gradient(135deg, #ff6a3d, #c2410c)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#070a10",
+                color: "#0e0d0c",
                 fontWeight: 800,
                 fontSize: "0.85rem",
-                boxShadow: "0 0 12px rgba(0, 240, 255, 0.4)",
+                boxShadow: "0 0 12px rgba(255, 106, 61, 0.4)",
               }}
             >
               SR
@@ -111,7 +111,7 @@ export function HeaderHUD() {
                 cursor: "pointer",
                 transition: "color 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-cyan)")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
             >
               Experience
@@ -127,7 +127,7 @@ export function HeaderHUD() {
                 cursor: "pointer",
                 transition: "color 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-cyan)")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
             >
               Skills Circuit
@@ -143,7 +143,7 @@ export function HeaderHUD() {
                 cursor: "pointer",
                 transition: "color 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-cyan)")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
             >
               Ventures & Projects
@@ -159,7 +159,7 @@ export function HeaderHUD() {
                 cursor: "pointer",
                 transition: "color 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-cyan)")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
             >
               Telemetry

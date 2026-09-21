@@ -38,7 +38,7 @@ export function ContactOutro() {
         particleCount: 50,
         spread: 60,
         origin: { y: 0.85 },
-        colors: ["#00f0ff", "#38bdf8", "#818cf8"],
+        colors: ["#ff6a3d", "#e8c872", "#d9a05b"],
       });
     } catch {
       // Ignore if confetti fails
@@ -86,7 +86,7 @@ export function ContactOutro() {
               transform: "translateX(-50%)",
               width: "250px",
               height: "100px",
-              background: "radial-gradient(ellipse at center, rgba(0, 240, 255, 0.35) 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, rgba(255, 106, 61, 0.35) 0%, transparent 70%)",
               pointerEvents: "none",
             }}
           />
@@ -124,8 +124,8 @@ export function ContactOutro() {
               padding: "0.85rem 1.75rem",
               borderRadius: "var(--radius-full)",
               background: "rgba(0, 0, 0, 0.45)",
-              border: "1px solid rgba(0, 240, 255, 0.35)",
-              boxShadow: "0 0 25px rgba(0, 240, 255, 0.15)",
+              border: "1px solid rgba(255, 106, 61, 0.35)",
+              boxShadow: "0 0 25px rgba(255, 106, 61, 0.15)",
               cursor: "pointer",
               transition: "all 0.25s ease",
               marginBottom: "2.5rem",
@@ -134,15 +134,15 @@ export function ContactOutro() {
             }}
             onClick={handleCopyEmail}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "var(--accent-cyan)";
+              e.currentTarget.style.borderColor = "var(--accent)";
               e.currentTarget.style.transform = "scale(1.02)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "rgba(0, 240, 255, 0.35)";
+              e.currentTarget.style.borderColor = "rgba(255, 106, 61, 0.35)";
               e.currentTarget.style.transform = "scale(1)";
             }}
           >
-            <Mail size={18} color="#00f0ff" />
+            <Mail size={18} color="#ff6a3d" />
             <span
               style={{
                 fontFamily: "var(--font-mono)",
@@ -194,7 +194,7 @@ export function ContactOutro() {
               rel="noopener noreferrer"
               className="btn-secondary"
             >
-              <LinkedinIcon color="#00f0ff" />
+              <LinkedinIcon color="#ff6a3d" />
               <span>Connect on LinkedIn</span>
             </a>
 
@@ -234,12 +234,12 @@ export function ContactOutro() {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <MapPin size={13} color="#00f0ff" />
+              <MapPin size={13} color="#ff6a3d" />
               <span>{profileData.location}</span>
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <Clock size={13} color="#00f0ff" />
+              <Clock size={13} color="#ff6a3d" />
               <span>LOCAL TIME: {localTime || "IST (UTC+5:30)"}</span>
             </div>
           </div>
@@ -280,7 +280,7 @@ export function ContactOutro() {
                 cursor: "pointer",
                 transition: "all 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--accent-cyan)")}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--accent)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-subtle)")}
               aria-label="Back to Top"
             >

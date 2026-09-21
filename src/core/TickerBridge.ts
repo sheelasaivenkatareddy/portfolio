@@ -19,11 +19,11 @@ export function initScrollEngine(): { lenis: Lenis; cleanup: () => void } {
 
   // Initialize Lenis with refined inertia constants
   lenisInstance = new Lenis({
-    duration: 1.15,
+    duration: 1.0,
     easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential decay curve
     orientation: "vertical",
     gestureOrientation: "vertical",
-    smoothWheel: true,
+    smoothWheel: !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     wheelMultiplier: 1.0,
     touchMultiplier: 1.5,
     infinite: false,

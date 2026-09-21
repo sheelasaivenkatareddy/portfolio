@@ -1,11 +1,26 @@
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 import profileData from "../../../data/profile.json";
-import { useScrollVelocity } from "../../../hooks/useScrollVelocity";
-import { GithubIcon, LinkedinIcon } from "../../common/BrandIcons";
 import { ArrowDown, MapPin, Sparkles } from "lucide-react";
 
 export function HeroSection() {
-  const velocity = useScrollVelocity();
-  const skewX = Math.max(-10, Math.min(10, velocity * -0.3));
+  const rootRef = useRef<HTMLElement>(null);
+
+  // Load sequence: badge > name > role > bio > CTAs > metrics > status
+  useLayoutEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const ctx = gsap.context(() => {
+      gsap.from("[data-reveal]", {
+        y: 16,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out",
+        stagger: 0.07,
+        delay: 0.1,
+      });
+    }, rootRef);
+    return () => ctx.revert();
+  }, []);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -14,6 +29,7 @@ export function HeroSection() {
 
   return (
     <section
+      ref={rootRef}
       id="hero-section"
       style={{
         minHeight: "100vh",
@@ -26,28 +42,29 @@ export function HeroSection() {
       }}
     >
       <div className="section-container" style={{ width: "100%", textAlign: "center" }}>
-        {/* Executive Tier Badge */}
+        {/* Role badge */}
         <div
+          data-reveal
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: "0.6rem",
             padding: "0.5rem 1.25rem",
             borderRadius: "var(--radius-full)",
-            background: "rgba(0, 240, 255, 0.06)",
-            border: "1px solid rgba(0, 240, 255, 0.3)",
-            boxShadow: "0 0 20px rgba(0, 240, 255, 0.15)",
+            background: "rgba(255, 106, 61, 0.06)",
+            border: "1px solid rgba(255, 106, 61, 0.3)",
+            boxShadow: "0 0 20px rgba(255, 106, 61, 0.15)",
             marginBottom: "1.75rem",
           }}
         >
-          <Sparkles size={14} color="#00f0ff" />
+          <Sparkles size={14} color="var(--accent)" />
           <span
             style={{
               fontFamily: "var(--font-mono)",
               fontSize: "0.78rem",
               fontWeight: 600,
               letterSpacing: "0.12em",
-              color: "var(--accent-cyan)",
+              color: "var(--accent)",
               textTransform: "uppercase",
             }}
           >
@@ -57,16 +74,15 @@ export function HeroSection() {
 
         {/* Main Name with Velocity Tilt */}
         <h1
-          className="velocity-skew-wrap"
+          data-reveal
           style={{
-            transform: `skewX(${skewX}deg)`,
             fontSize: "var(--text-huge)",
             fontWeight: 900,
             letterSpacing: "-0.04em",
             lineHeight: 1.05,
             marginBottom: "1.25rem",
             textTransform: "uppercase",
-            color: "#ffffff",
+            color: "var(--text-primary)",
           }}
         >
           {profileData.name}
@@ -74,10 +90,11 @@ export function HeroSection() {
 
         {/* Sub-Headline */}
         <div
+          data-reveal
           style={{
-            fontSize: "var(--text-xl)",
-            fontWeight: 600,
-            color: "var(--accent-sky)",
+            fontSize: "var(--text-2xl)",
+            fontWeight: 700,
+            color: "var(--text-primary)",
             marginBottom: "1.5rem",
             letterSpacing: "-0.01em",
             maxWidth: "850px",
@@ -89,10 +106,11 @@ export function HeroSection() {
 
         {/* Narrative Pitch */}
         <p
+          data-reveal
           style={{
             fontSize: "var(--text-base)",
             color: "var(--text-secondary)",
-            maxWidth: "760px",
+            maxWidth: "620px",
             margin: "0 auto 2.5rem",
             lineHeight: 1.7,
           }}
@@ -100,8 +118,9 @@ export function HeroSection() {
           {profileData.bio}
         </p>
 
-        {/* Action Buttons & Direct Channels */}
+        {/* Primary + secondary action */}
         <div
+          data-reveal
           style={{
             display: "flex",
             alignItems: "center",
@@ -111,44 +130,23 @@ export function HeroSection() {
             marginBottom: "3.5rem",
           }}
         >
-          <button onClick={() => scrollTo("experience-section")} className="btn-primary">
-            Explore Ventures <ArrowDown size={16} />
+          <button onClick={() => scrollTo("projects-bento")} className="btn-primary">
+            See selected work <ArrowDown size={16} />
           </button>
 
-          <button onClick={() => scrollTo("projects-bento")} className="btn-secondary">
-            View Architectures
+          <button onClick={() => scrollTo("experience-section")} className="btn-secondary">
+            Experience
           </button>
-
-          <a
-            href={profileData.socials.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-            style={{ padding: "0.85rem 1.15rem" }}
-            aria-label="LinkedIn Profile"
-          >
-            <LinkedinIcon color="#00f0ff" />
-          </a>
-
-          <a
-            href={profileData.socials.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-            style={{ padding: "0.85rem 1.15rem" }}
-            aria-label="GitHub Profile"
-          >
-            <GithubIcon />
-          </a>
         </div>
 
         {/* High-Fidelity Metrics Ribbon */}
         <div
+          data-reveal
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
             gap: "1.25rem",
-            maxWidth: "1080px",
+            maxWidth: "560px",
             margin: "0 auto",
           }}
         >
@@ -171,14 +169,14 @@ export function HeroSection() {
                   transform: "translateX(-50%)",
                   width: "40%",
                   height: "1px",
-                  background: "linear-gradient(90deg, transparent, #00f0ff, transparent)",
+                  background: "linear-gradient(90deg, transparent, #ff6a3d, transparent)",
                 }}
               />
               <div
                 style={{
                   fontSize: "var(--text-2xl)",
                   fontWeight: 800,
-                  color: "var(--accent-cyan)",
+                  color: "var(--accent)",
                   letterSpacing: "-0.02em",
                   marginBottom: "0.35rem",
                 }}
@@ -202,6 +200,7 @@ export function HeroSection() {
 
         {/* Location & Status Pill */}
         <div
+          data-reveal
           style={{
             marginTop: "3rem",
             display: "inline-flex",
@@ -215,10 +214,10 @@ export function HeroSection() {
             color: "var(--text-secondary)",
           }}
         >
-          <MapPin size={14} color="#00f0ff" />
+          <MapPin size={14} color="var(--accent)" />
           <span>{profileData.location}</span>
           <span style={{ color: "var(--border-subtle)" }}>|</span>
-          <span style={{ color: "#10b981", fontWeight: 600 }}>{profileData.status}</span>
+          <span style={{ color: "var(--accent-emerald)", fontWeight: 600 }}>{profileData.status}</span>
         </div>
       </div>
     </section>

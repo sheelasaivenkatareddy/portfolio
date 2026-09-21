@@ -3,7 +3,7 @@
   "shortName": "Sai Venkat",
   "title": "CO-FOUNDER • CTO • COO • CMO • EXECUTIVE LEAD",
   "heroRole": "Multi-Venture Tech Executive & Full-Stack Systems Engineer",
-  "bio": "Architecting scalable web platforms, high-performance distributed systems, and real-time AI applications across enterprises. Directing end-to-end technical vision, product roadmaps, and venture execution.",
+  "bio": "I build and lead scalable web platforms and real-time AI products, from architecture to venture execution.",
   "location": "Bengaluru / Nandyal, IN",
   "email": "venkatareddysai6@gmail.com",
   "status": "Available for Strategic Advisory & Technical Leadership",
@@ -14,8 +14,6 @@
   },
   "metrics": [
     { "label": "Ventures Co-Founded", "value": "2+" },
-    { "label": "Executive Roles", "value": "CTO / COO / CMO" },
-    { "label": "Core Architectures", "value": "Full-Stack & Real-Time AI" },
-    { "label": "Frame Target", "value": "120 FPS Locked" }
+    { "label": "Stream Latency", "value": "< 450ms" }
   ]
 }

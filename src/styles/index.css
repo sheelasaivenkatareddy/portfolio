@@ -58,11 +58,11 @@ html.lenis, html.lenis body {
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2636;
+  background: #2a2622;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-cyan);
+  background: var(--accent);
 }
 
 /* Fixed WebGL Background Canvas */
@@ -102,8 +102,8 @@ html.lenis, html.lenis body {
 /* Glassmorphism Cards */
 .glass-panel {
   background: var(--bg-surface);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-subtle);
@@ -126,7 +126,7 @@ html.lenis, html.lenis body {
 .velocity-skew-wrap {
   display: inline-block;
   transform-origin: left center;
-  transition: transform 0.1s linear;
+  will-change: transform;
 }
 
 /* Circuit Line Matrix */
@@ -142,15 +142,14 @@ html.lenis, html.lenis body {
 
 .circuit-path {
   fill: none;
-  stroke: rgba(0, 240, 255, 0.4);
+  stroke: rgba(255, 106, 61, 0.55);
   stroke-width: 2.5;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.7));
 }
 
 .circuit-path-bg {
   fill: none;
-  stroke: rgba(38, 44, 54, 0.6);
+  stroke: rgba(42, 38, 34, 0.6);
   stroke-width: 2;
   stroke-linecap: round;
 }
@@ -167,9 +166,9 @@ html.lenis, html.lenis body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: var(--radius-full);
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  color: var(--accent-cyan);
+  background: rgba(255, 106, 61, 0.08);
+  border: 1px solid rgba(255, 106, 61, 0.25);
+  color: var(--accent);
 }
 
 .badge-pill-neutral {
@@ -198,18 +197,18 @@ html.lenis, html.lenis body {
   font-weight: 600;
   letter-spacing: 0.02em;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #00f0ff 0%, #0099ff 100%);
-  color: #070a10;
+  background: linear-gradient(135deg, #ff6a3d 0%, #e8501f 100%);
+  color: #0e0d0c;
   border: none;
   cursor: pointer;
   text-decoration: none;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 4px 18px rgba(0, 240, 255, 0.35);
+  box-shadow: 0 4px 18px rgba(255, 106, 61, 0.35);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 28px rgba(0, 240, 255, 0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 106, 61, 0.55);
 }
 
 .btn-secondary {
@@ -244,5 +243,14 @@ html.lenis, html.lenis body {
 @media (max-width: 768px) {
   .section-spacer {
     padding: 4.5rem 0;
+  }
+}
+
+/* Touch devices / reduced motion: drop the costliest compositing effects */
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .glass-panel {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--bg-card);
   }
 }

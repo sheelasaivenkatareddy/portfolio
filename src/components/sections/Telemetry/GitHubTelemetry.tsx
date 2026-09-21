@@ -47,14 +47,14 @@ export function GitHubTelemetry() {
                       width: "40px",
                       height: "40px",
                       borderRadius: "50%",
-                      background: "rgba(0, 240, 255, 0.1)",
-                      border: "1px solid rgba(0, 240, 255, 0.3)",
+                      background: "rgba(255, 106, 61, 0.1)",
+                      border: "1px solid rgba(255, 106, 61, 0.3)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                     }}
                   >
-                    <GithubIcon color="#00f0ff" width={20} height={20} />
+                    <GithubIcon color="#ff6a3d" width={20} height={20} />
                   </div>
                   <div>
                     <div style={{ fontWeight: 700, fontSize: "1rem", color: "#ffffff" }}>
@@ -104,7 +104,7 @@ export function GitHubTelemetry() {
                     style={{
                       fontSize: "var(--text-2xl)",
                       fontWeight: 800,
-                      color: "var(--accent-cyan)",
+                      color: "var(--accent)",
                       fontFamily: "var(--font-mono)",
                     }}
                   >
@@ -185,7 +185,7 @@ export function GitHubTelemetry() {
                             height: `${heightPercent}%`,
                             background:
                               aIdx >= 6
-                                ? "linear-gradient(180deg, #00f0ff 0%, #0284c7 100%)"
+                                ? "linear-gradient(180deg, #ff6a3d 0%, #c2410c 100%)"
                                 : "rgba(255, 255, 255, 0.15)",
                             borderRadius: "3px",
                             transition: "all 0.3s ease",
@@ -272,7 +272,7 @@ export function GitHubTelemetry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                <Terminal size={20} color="#00f0ff" />
+                <Terminal size={20} color="#ff6a3d" />
                 <h3
                   style={{
                     fontSize: "var(--text-lg)",
@@ -303,7 +303,7 @@ export function GitHubTelemetry() {
                   >
                     <GitBranch
                       size={16}
-                      color="#00f0ff"
+                      color="#ff6a3d"
                       style={{ flexShrink: 0, marginTop: "0.15rem" }}
                     />
                     <span>{hl}</span>
@@ -317,8 +317,8 @@ export function GitHubTelemetry() {
               style={{
                 padding: "1.25rem",
                 borderRadius: "var(--radius-md)",
-                background: "rgba(0, 240, 255, 0.04)",
-                border: "1px solid rgba(0, 240, 255, 0.2)",
+                background: "rgba(255, 106, 61, 0.04)",
+                border: "1px solid rgba(255, 106, 61, 0.2)",
               }}
             >
               <div
@@ -330,13 +330,13 @@ export function GitHubTelemetry() {
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                  <ShieldCheck size={16} color="#00f0ff" />
+                  <ShieldCheck size={16} color="#ff6a3d" />
                   <span
                     style={{
                       fontFamily: "var(--font-mono)",
                       fontSize: "0.75rem",
                       fontWeight: 600,
-                      color: "var(--accent-cyan)",
+                      color: "var(--accent)",
                     }}
                   >
                     120FPS GPU COMPOSITING

@@ -72,7 +72,7 @@ export function ProjectsBento() {
                     left: "2rem",
                     right: "2rem",
                     height: "1px",
-                    background: "linear-gradient(90deg, transparent, #00f0ff, transparent)",
+                    background: "linear-gradient(90deg, transparent, #ff6a3d, transparent)",
                     opacity: 0.7,
                   }}
                 />
@@ -116,7 +116,7 @@ export function ProjectsBento() {
                     style={{
                       fontSize: "var(--text-sm)",
                       fontWeight: 500,
-                      color: "var(--accent-sky)",
+                      color: "var(--accent-secondary)",
                       marginBottom: "1rem",
                     }}
                   >
@@ -156,7 +156,7 @@ export function ProjectsBento() {
                           style={{
                             fontSize: "var(--text-base)",
                             fontWeight: 700,
-                            color: "var(--accent-cyan)",
+                            color: "var(--accent)",
                             fontFamily: "var(--font-mono)",
                           }}
                         >
@@ -199,7 +199,7 @@ export function ProjectsBento() {
                         gap: "0.35rem",
                         fontSize: "0.8rem",
                         fontWeight: 600,
-                        color: "var(--accent-cyan)",
+                        color: "var(--accent)",
                       }}
                     >
                       Case Study <ArrowUpRight size={15} />
@@ -223,7 +223,7 @@ export function ProjectsBento() {
             alignItems: "center",
             justifyContent: "center",
             padding: "1.5rem",
-            background: "rgba(11, 15, 23, 0.88)",
+            background: "rgba(14, 13, 12, 0.88)",
             backdropFilter: "blur(24px)",
             WebkitBackdropFilter: "blur(24px)",
           }}
@@ -238,8 +238,8 @@ export function ProjectsBento() {
               overflowY: "auto",
               padding: "2.5rem",
               borderRadius: "var(--radius-xl)",
-              background: "#111622",
-              border: "1px solid rgba(0, 240, 255, 0.3)",
+              background: "#171513",
+              border: "1px solid rgba(255, 106, 61, 0.3)",
               boxShadow: "0 25px 60px rgba(0, 0, 0, 0.8)",
               position: "relative",
             }}
@@ -289,7 +289,7 @@ export function ProjectsBento() {
             <div
               style={{
                 fontSize: "var(--text-base)",
-                color: "var(--accent-sky)",
+                color: "var(--accent-secondary)",
                 fontWeight: 600,
                 marginBottom: "1.5rem",
               }}
@@ -315,8 +315,8 @@ export function ProjectsBento() {
                 style={{
                   padding: "1.5rem",
                   borderRadius: "var(--radius-lg)",
-                  background: "rgba(0, 240, 255, 0.03)",
-                  border: "1px solid rgba(0, 240, 255, 0.15)",
+                  background: "rgba(255, 106, 61, 0.03)",
+                  border: "1px solid rgba(255, 106, 61, 0.15)",
                 }}
               >
                 <div
@@ -326,7 +326,7 @@ export function ProjectsBento() {
                     gap: "0.5rem",
                     fontSize: "var(--text-sm)",
                     fontWeight: 700,
-                    color: "var(--accent-cyan)",
+                    color: "var(--accent)",
                     fontFamily: "var(--font-mono)",
                     textTransform: "uppercase",
                     marginBottom: "0.5rem",
@@ -360,7 +360,7 @@ export function ProjectsBento() {
                     marginBottom: "0.5rem",
                   }}
                 >
-                  <Sparkles size={16} color="#38bdf8" /> Engineering Breakthroughs
+                  <Sparkles size={16} color="#e8c872" /> Engineering Breakthroughs
                 </div>
                 <p style={{ fontSize: "var(--text-sm)", color: "var(--text-secondary)", lineHeight: 1.6 }}>
                   {activeProject.caseStudy.breakthroughs}
@@ -394,7 +394,7 @@ export function ProjectsBento() {
                       color: "var(--text-primary)",
                     }}
                   >
-                    <CheckCircle2 size={16} color="#00f0ff" />
+                    <CheckCircle2 size={16} color="#ff6a3d" />
                     <span>{item}</span>
                   </div>
                 ))}
