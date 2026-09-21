@@ -1,0 +1,40 @@
+{
+  "categories": [
+    {
+      "id": "languages",
+      "name": "Core Languages",
+      "circuitTag": "CIRCUIT-01",
+      "skills": ["JavaScript (ES6+)", "TypeScript", "Python", "C/C++", "HTML5", "CSS3", "SQL"]
+    },
+    {
+      "id": "web-frameworks",
+      "name": "Web & Frameworks",
+      "circuitTag": "CIRCUIT-02",
+      "skills": ["React.js", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "Shadcn/UI", "WebRTC"]
+    },
+    {
+      "id": "databases-cloud",
+      "name": "Databases & Cloud",
+      "circuitTag": "CIRCUIT-03",
+      "skills": ["Supabase", "Firebase", "MySQL", "PostgreSQL", "REST APIs"]
+    },
+    {
+      "id": "tools-ecosystem",
+      "name": "Tools & Ecosystem",
+      "circuitTag": "CIRCUIT-04",
+      "skills": ["Git", "GitHub", "VS Code", "Linux / Bash", "Postman", "OpenAI & Whisper APIs"]
+    },
+    {
+      "id": "executive-leadership",
+      "name": "Executive Leadership",
+      "circuitTag": "CIRCUIT-05",
+      "skills": [
+        "System Architecture (CTO)",
+        "Startup Operations (COO)",
+        "Growth Marketing (CMO)",
+        "Agile Sprint Management",
+        "Venture Product Roadmaps"
+      ]
+    }
+  ]
+}

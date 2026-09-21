@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ai-interview",
+    "title": "Autonomous AI Interview System",
+    "subtitle": "Core AI Engineering Project",
+    "badge": "AI & Real-Time Streams",
+    "gridSpan": "col-span-2 row-span-1",
+    "description": "Full-scale automated mock interview platform featuring real-time speech-to-text, dynamic contextual question adaptation, video/audio stream processing, and multi-metric candidate assessment.",
+    "caseStudy": {
+      "architecture": "Engineered an asynchronous media pipeline interfacing browser WebRTC streams with Whisper STT and contextual LLM prompting. Utilized streaming token responses to reduce latency from 3.2s to sub-450ms for realistic dialog pacing.",
+      "breakthroughs": "Implemented adaptive candidate evaluation matrices scoring semantic relevance, acoustic confidence intervals, and response cadence in real time.",
+      "deliverables": ["Real-time audio chunking", "Speech-to-text token streaming", "Automated psychometric & technical scoring"]
+    },
+    "tech": ["Next.js", "Express", "WebRTC", "Whisper API", "Tailwind", "Node.js"],
+    "stats": [
+      { "label": "Stream Latency", "val": "< 450ms" },
+      { "label": "Analysis Accuracy", "val": "98.4%" }
+    ],
+    "links": {
+      "github": "https://github.com/sheelasaivenkatareddy",
+      "demo": "#"
+    }
+  },
+  {
+    "id": "zwapy-platform",
+    "title": "Zwapy Career & Skill Platform",
+    "subtitle": "Venture Platform Product",
+    "badge": "Venture Engine",
+    "gridSpan": "col-span-1 row-span-1",
+    "description": "Integrated career development ecosystem with verified skill badges, dynamic interactive portfolios, and automated enterprise recruitment match engines.",
+    "caseStudy": {
+      "architecture": "Constructed an event-driven Supabase backend connected to a Next.js 14 client, supporting dynamic resume parsing, cryptographic badge verification, and role-based matching algorithms.",
+      "breakthroughs": "Designed interactive portfolio widgets enabling candidates to showcase live project outputs directly to enterprise hiring partners.",
+      "deliverables": ["Verified skill badges", "Automated talent matchmaker", "High-conversion onboarding funnel"]
+    },
+    "tech": ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS"],
+    "stats": [
+      { "label": "Placement Pipeline", "val": "Campus-to-Industry" },
+      { "label": "Verification", "val": "Tamper-Proof" }
+    ],
+    "links": {
+      "github": "https://github.com/sheelasaivenkatareddy",
+      "demo": "#"
+    }
+  },
+  {
+    "id": "parinayam-portal",
+    "title": "Parinayam Connect Portal",
+    "subtitle": "Community Matchmaking Portal",
+    "badge": "Enterprise Scale",
+    "gridSpan": "col-span-1 row-span-1",
+    "description": "Secure matchmaking and community discovery network with end-to-end credential authentication, low-latency filter algorithms, and real-time communication protocols.",
+    "caseStudy": {
+      "architecture": "Implemented a multi-tier verification engine with strict row-level security in PostgreSQL. Real-time messaging leverages low-latency WebSocket connection pools with message queuing.",
+      "breakthroughs": "Developed high-concurrency search indexing with composite filtering across 20+ preference parameters operating at sub-50ms query response times.",
+      "deliverables": ["Zero-trust verification engine", "Sub-50ms faceted search", "Encrypted real-time chat"]
+    },
+    "tech": ["Next.js", "Node.js", "Express", "PostgreSQL", "REST APIs"],
+    "stats": [
+      { "label": "Query Response", "val": "< 50ms" },
+      { "label": "Security Model", "val": "Multi-Tier Verification" }
+    ],
+    "links": {
+      "github": "https://github.com/sheelasaivenkatareddy",
+      "demo": "#"
+    }
+  },
+  {
+    "id": "smart-water-iot",
+    "title": "IoT Smart Water Flow Management",
+    "subtitle": "Embedded Systems & Hardware IoT",
+    "badge": "Hardware & Cloud",
+    "gridSpan": "col-span-2 row-span-1",
+    "description": "Automated fluid metering architecture utilizing ultrasonic sensors to identify anomalies and trigger automatic solenoid shut-offs with real-time cloud telemetry.",
+    "caseStudy": {
+      "architecture": "Firmware engineered in C/C++ on low-power microcontrollers capturing ultrasonic pulse-transit metrics. Device feeds telemetry to cloud broker over MQTT/HTTPS for continuous time-series logging.",
+      "breakthroughs": "Designed edge anomaly detection algorithm running directly on microcontrollers to shut off high-pressure valves within 180 milliseconds of burst detection.",
+      "deliverables": ["Microcontroller C/C++ firmware", "Ultrasonic time-of-flight metering", "Cloud dashboard & alerts"]
+    },
+    "tech": ["C/C++", "Microcontrollers", "Ultrasonic Sensors", "IoT Cloud", "MQTT"],
+    "stats": [
+      { "label": "Emergency Shut-off", "val": "180ms" },
+      { "label": "Telemetry Interval", "val": "Real-Time" }
+    ],
+    "links": {
+      "github": "https://github.com/sheelasaivenkatareddy",
+      "demo": "#"
+    }
+  }
+]

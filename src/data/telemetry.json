@@ -1,0 +1,31 @@
+{
+  "githubHandle": "sheelasaivenkatareddy",
+  "githubUrl": "https://github.com/sheelasaivenkatareddy",
+  "stats": {
+    "totalCommits": "840+",
+    "publicRepos": "24",
+    "primaryLanguage": "TypeScript",
+    "languages": [
+      { "name": "TypeScript / React", "percent": 44, "color": "#00F0FF" },
+      { "name": "Python", "percent": 26, "color": "#38BDF8" },
+      { "name": "C / C++ (Embedded)", "percent": 18, "color": "#818CF8" },
+      { "name": "SQL / Cloud DBs", "percent": 12, "color": "#A78BFA" }
+    ],
+    "activity": [
+      { "week": "W1", "commits": 18 },
+      { "week": "W2", "commits": 24 },
+      { "week": "W3", "commits": 31 },
+      { "week": "W4", "commits": 28 },
+      { "week": "W5", "commits": 42 },
+      { "week": "W6", "commits": 39 },
+      { "week": "W7", "commits": 47 },
+      { "week": "W8", "commits": 54 }
+    ],
+    "recentHighlights": [
+      "Autonomous AI Interview System streaming audio pipeline",
+      "Zwapy platform talent verification engine & Next.js client",
+      "High-speed ultrasonic IoT firmware telemetry integration",
+      "Zero-trust credential hashing for Parinayam Connect"
+    ]
+  }
+}

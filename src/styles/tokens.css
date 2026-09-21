@@ -1,0 +1,52 @@
+:root {
+  /* Color Palette - Apple Dark Minimalist + Electric Cyan */
+  --bg-primary: #0b0f17;
+  --bg-surface: rgba(17, 22, 34, 0.75);
+  --bg-surface-elevated: rgba(23, 30, 46, 0.85);
+  --bg-card: #111622;
+  --bg-card-hover: #161d2d;
+  
+  --border-subtle: #262c36;
+  --border-active: rgba(0, 240, 255, 0.45);
+  --border-highlight: rgba(255, 255, 255, 0.12);
+
+  --accent-cyan: #00f0ff;
+  --accent-sky: #38bdf8;
+  --accent-emerald: #10b981;
+  --accent-glow: 0 0 24px rgba(0, 240, 255, 0.35);
+  --accent-glow-sm: 0 0 12px rgba(0, 240, 255, 0.25);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverse: #0b0f17;
+
+  /* Typography */
+  --font-sans: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", "Courier New", monospace;
+
+  /* Fluid Scales */
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.3vw, 0.925rem);
+  --text-base: clamp(0.95rem, 0.9rem + 0.35vw, 1.05rem);
+  --text-lg: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
+  --text-xl: clamp(1.4rem, 1.25rem + 0.8vw, 1.75rem);
+  --text-2xl: clamp(1.8rem, 1.5rem + 1.2vw, 2.4rem);
+  --text-3xl: clamp(2.4rem, 1.9rem + 2vw, 3.4rem);
+  --text-huge: clamp(3.2rem, 2.4rem + 4vw, 5.5rem);
+
+  /* Layout & Depth */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-deep: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 8px 32px rgba(0, 240, 255, 0.15);
+
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

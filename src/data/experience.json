@@ -1,0 +1,44 @@
+[
+  {
+    "id": "zwapy",
+    "company": "Zwapy Private Limited",
+    "role": "Co-Founder, CTO, COO & Executive Lead",
+    "period": "2026 – Present",
+    "location": "Bengaluru / Hybrid",
+    "ventureType": "EdTech & Talent Infrastructure",
+    "tagline": "Directing Technical Architecture, Product Roadmaps & Talent Placement Pipelines",
+    "highlights": [
+      "Directing end-to-end technical system architecture, product roadmaps, and full-stack front-end engineering using Next.js, React, Tailwind CSS, and cloud databases (Supabase/Firebase).",
+      "Spearheading company-wide operational workflows, agile sprint cadences, and strategic talent placement pipelines connecting universities to industry.",
+      "Engineered automated skill verification engines and high-concurrency applicant screening modules."
+    ],
+    "metrics": {
+      "metric1": "100%",
+      "label1": "Cloud-Native Microservices",
+      "metric2": "< 120ms",
+      "label2": "Query Latency on Supabase"
+    },
+    "techStack": ["Next.js", "React", "Tailwind CSS", "Supabase", "Firebase", "TypeScript", "Agile Sprints"]
+  },
+  {
+    "id": "parinayam",
+    "company": "Parinayam Connect Private Limited",
+    "role": "Co-Founder, CTO, COO, CMO & Executive Lead",
+    "period": "2026 – Present",
+    "location": "Bengaluru / Regional",
+    "ventureType": "Community Discovery & Matchmaking Network",
+    "tagline": "Architecting Multi-Tier Verification Engines & Driving Omni-Channel GTM Funnels",
+    "highlights": [
+      "Engineering the core platform infrastructure, multi-tier profile verification engines, and secure high-concurrency database architecture while leading operations.",
+      "Formulating and executing multi-channel Go-To-Market (GTM) strategies, brand identity, and acquisition funnels as Chief Marketing Officer (CMO).",
+      "Instituted zero-trust credential authentication and real-time WebSocket communication channels."
+    ],
+    "metrics": {
+      "metric1": "99.9%",
+      "label1": "Platform Uptime Target",
+      "metric2": "End-to-End",
+      "label2": "Encrypted Identity Verification"
+    },
+    "techStack": ["Next.js", "Node.js", "Express", "PostgreSQL", "REST APIs", "WebSockets", "GTM Strategy"]
+  }
+]
