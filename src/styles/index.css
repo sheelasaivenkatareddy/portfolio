@@ -147,12 +147,29 @@ html.lenis, html.lenis body {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-subtle);
-  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth),
+    transform var(--transition-smooth);
 }
 
-.glass-panel:hover {
-  border-color: var(--border-active);
-  box-shadow: var(--shadow-glow);
+@media (hover: hover) {
+  .glass-panel:hover {
+    border-color: var(--border-active);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-3px);
+  }
+}
+
+/* Certificate / gallery thumbnails: zoom the photo, not the card */
+.img-zoom-wrap {
+  overflow: hidden;
+}
+.img-zoom {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (hover: hover) {
+  .img-zoom-wrap:hover .img-zoom {
+    transform: scale(1.07);
+  }
 }
 
 /* Hardware Acceleration Helpers */
@@ -225,6 +242,16 @@ html.lenis, html.lenis body {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
+  transition: border-color var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+@media (hover: hover) {
+  .badge-pill-neutral:hover {
+    border-color: var(--border-active);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
 }
 
 /* Buttons */

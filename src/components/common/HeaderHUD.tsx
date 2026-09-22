@@ -1,8 +1,12 @@
+import { useRef } from "react";
 import { useScrollProgress } from "../../hooks/useScrollProgress";
+import { useMagnetic } from "../../hooks/useMagnetic";
 import { ArrowUpRight } from "lucide-react";
 
 export function HeaderHUD() {
   const progress = useScrollProgress();
+  const connectRef = useRef<HTMLButtonElement>(null);
+  useMagnetic(connectRef, 0.35);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -212,6 +216,7 @@ export function HeaderHUD() {
             </div>
 
             <button
+              ref={connectRef}
               onClick={() => scrollTo("contact-section")}
               className="btn-primary"
               style={{

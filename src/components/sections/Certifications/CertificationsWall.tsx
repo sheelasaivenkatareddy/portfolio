@@ -47,8 +47,9 @@ export function CertificationsWall() {
               boxShadow: "0 0 40px rgba(234, 255, 138, 0.12)",
             }}
           >
-            <div style={{ position: "relative", minHeight: "260px", overflow: "hidden" }}>
+            <div className="img-zoom-wrap" style={{ position: "relative", minHeight: "260px", overflow: "hidden" }}>
               <img
+                className="img-zoom"
                 src={award.image}
                 alt={award.title}
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
@@ -180,6 +181,7 @@ export function CertificationsWall() {
                   }}
                 >
                   <div
+                    className="img-zoom-wrap"
                     style={{
                       position: "relative",
                       width: "100%",
@@ -189,6 +191,7 @@ export function CertificationsWall() {
                     }}
                   >
                     <img
+                      className="img-zoom"
                       src={cert.image}
                       alt={cert.title}
                       loading="lazy"
@@ -316,7 +319,7 @@ export function CertificationsWall() {
             {gallery.map((shot) => (
               <div
                 key={shot.id}
-                className="glass-panel"
+                className="glass-panel img-zoom-wrap"
                 style={{
                   position: "relative",
                   flex: "0 0 260px",
@@ -326,6 +329,7 @@ export function CertificationsWall() {
                 }}
               >
                 <img
+                  className="img-zoom"
                   src={shot.image}
                   alt={shot.caption}
                   loading="lazy"

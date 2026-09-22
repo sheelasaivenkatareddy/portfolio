@@ -1,6 +1,7 @@
 import { useState } from "react";
 import projectsData from "../../../data/projects.json";
 import { VelocityHeading } from "../../common/VelocityHeading";
+import { CountUp } from "../../common/CountUp";
 import { GithubIcon } from "../../common/BrandIcons";
 import { Sparkles, ArrowUpRight, X, CheckCircle2, Cpu } from "lucide-react";
 
@@ -160,7 +161,7 @@ export function ProjectsBento() {
                             fontFamily: "var(--font-mono)",
                           }}
                         >
-                          {st.val}
+                          <CountUp value={st.val} />
                         </div>
                         <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>
                           {st.label}

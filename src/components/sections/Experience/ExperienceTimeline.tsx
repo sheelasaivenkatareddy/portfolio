@@ -1,5 +1,6 @@
 import experienceData from "../../../data/experience.json";
 import { VelocityHeading } from "../../common/VelocityHeading";
+import { CountUp } from "../../common/CountUp";
 import { Calendar, MapPin, CheckCircle2, Award } from "lucide-react";
 
 export function ExperienceTimeline() {
@@ -198,7 +199,7 @@ export function ExperienceTimeline() {
                         fontFamily: "var(--font-mono)",
                       }}
                     >
-                      {exp.metrics.metric1}
+                      <CountUp value={exp.metrics.metric1} />
                     </div>
                     <div style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>
                       {exp.metrics.label1}
@@ -213,7 +214,7 @@ export function ExperienceTimeline() {
                         fontFamily: "var(--font-mono)",
                       }}
                     >
-                      {exp.metrics.metric2}
+                      <CountUp value={exp.metrics.metric2} />
                     </div>
                     <div style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>
                       {exp.metrics.label2}

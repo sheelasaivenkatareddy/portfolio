@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
 import profileData from "../../../data/profile.json";
 import { VelocityHeading } from "../../common/VelocityHeading";
 import { GithubIcon, LinkedinIcon } from "../../common/BrandIcons";
+import { useMagnetic } from "../../../hooks/useMagnetic";
 import { Mail, MapPin, Copy, Check, Clock, ArrowUp } from "lucide-react";
 
 export function ContactOutro() {
   const [copied, setCopied] = useState(false);
   const [localTime, setLocalTime] = useState("");
+  const sendRef = useRef<HTMLAnchorElement>(null);
+  useMagnetic(sendRef, 0.3);
 
   useEffect(() => {
     const updateTime = () => {
@@ -209,6 +212,7 @@ export function ContactOutro() {
             </a>
 
             <a
+              ref={sendRef}
               href={profileData.socials.email}
               className="btn-primary"
             >

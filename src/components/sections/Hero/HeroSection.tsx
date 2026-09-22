@@ -1,10 +1,14 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import profileData from "../../../data/profile.json";
+import { CountUp } from "../../common/CountUp";
+import { useMagnetic } from "../../../hooks/useMagnetic";
 import { ArrowDown, MapPin, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   const rootRef = useRef<HTMLElement>(null);
+  const primaryCtaRef = useRef<HTMLButtonElement>(null);
+  useMagnetic(primaryCtaRef, 0.3);
 
   // Load sequence: badge > name > role > bio > CTAs > metrics > status
   useLayoutEffect(() => {
@@ -159,7 +163,11 @@ export function HeroSection() {
             marginBottom: "3.5rem",
           }}
         >
-          <button onClick={() => scrollTo("projects-bento")} className="btn-primary">
+          <button
+            ref={primaryCtaRef}
+            onClick={() => scrollTo("projects-bento")}
+            className="btn-primary"
+          >
             See selected work <ArrowDown size={16} />
           </button>
 
@@ -210,7 +218,7 @@ export function HeroSection() {
                   marginBottom: "0.35rem",
                 }}
               >
-                {metric.value}
+                <CountUp value={metric.value} triggerOnScroll={false} delay={0.5 + idx * 0.15} />
               </div>
               <div
                 style={{
