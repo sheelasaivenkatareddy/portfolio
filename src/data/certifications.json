@@ -1,0 +1,112 @@
+[
+  {
+    "id": "startup-safari-2-runner-up",
+    "title": "Startup Safari 2.0 — 2nd Prize",
+    "issuer": "Startup Safari 2.0 — Presidency University",
+    "date": "2026",
+    "category": "Award",
+    "image": "/images/gallery/startup-safari-01.jpg",
+    "blurb": "Placed 2nd at Startup Safari 2.0: Into the Start-up Wild, a Presidency University showcase where student teams pitched live in front of founders and mentors — recognized for the strength of execution and storytelling behind the pitch."
+  },
+  {
+    "id": "be10x-ai-tools",
+    "title": "AI Tools & ChatGPT Workshop",
+    "issuer": "be10x",
+    "date": "8 Jun 2025",
+    "category": "AI & Tech",
+    "image": "/images/certificates/be10x-ai-tools-chatgpt.jpg",
+    "blurb": "Completed a hands-on AI tools workshop covering rapid presentation building, data analysis, and AI-assisted coding and debugging — practical workflows for shipping faster with generative AI."
+  },
+  {
+    "id": "google-workspace-ai",
+    "title": "Bring AI to Work Workshop",
+    "issuer": "Google Workspace",
+    "date": "10 Jun 2025",
+    "category": "AI & Tech",
+    "image": "/images/certificates/google-workspace-ai.jpg",
+    "blurb": "Completed Google Workspace's applied AI workshop on integrating generative AI into everyday work — from drafting and summarizing to automating repetitive tasks inside a real productivity stack."
+  },
+  {
+    "id": "paytm-cybersecurity",
+    "title": "Cybersecurity & Forensics Workshop with Paytm",
+    "issuer": "Presidency University x Zell Education",
+    "date": "29 Sep 2025",
+    "category": "AI & Tech",
+    "image": "/images/certificates/paytm-cybersecurity-forensics.jpg",
+    "blurb": "Completed an applied workshop on cybersecurity fundamentals and digital forensics techniques, delivered in partnership with Paytm's security team."
+  },
+  {
+    "id": "hackerrank-sql-basic",
+    "title": "SQL (Basic) — Certificate of Accomplishment",
+    "issuer": "HackerRank",
+    "date": "3 Apr 2026",
+    "category": "AI & Tech",
+    "image": "/images/certificates/hackerrank-sql-basic.jpg",
+    "credentialId": "96025D234871",
+    "blurb": "Passed HackerRank's SQL (Basic) certification, verifying core skills in querying, filtering, and joining relational data."
+  },
+  {
+    "id": "hackerrank-sql-intermediate",
+    "title": "SQL (Intermediate) — Certificate of Accomplishment",
+    "issuer": "HackerRank",
+    "date": "6 Apr 2026",
+    "category": "AI & Tech",
+    "image": "/images/certificates/hackerrank-sql-intermediate.jpg",
+    "credentialId": "76FBF10F1D28",
+    "blurb": "Passed HackerRank's SQL (Intermediate) certification, verifying applied skills in aggregation, subqueries, and multi-table joins for real-world data analysis."
+  },
+  {
+    "id": "indiaignite-rvitm",
+    "title": "IndiAignite: Prototyping AI Solutions for Atmanirbhar Bharat",
+    "issuer": "RV Institute of Technology & Management",
+    "date": "4–5 Feb 2026",
+    "category": "AI & Tech",
+    "image": "/images/certificates/indiaignite-rvitm.jpg",
+    "blurb": "Recognized for excellence in innovation, presentation, and technical execution while prototyping an AI-driven solution addressing India's self-reliance challenges, competing against student teams from across the region."
+  },
+  {
+    "id": "innovatex-4",
+    "title": "InnovateX 4.0 — International Tech Fest: Build with AI",
+    "issuer": "Presidency University · Institution's Innovation Council",
+    "date": "6–9 Apr 2026",
+    "category": "AI & Tech",
+    "image": "/images/certificates/innovatex-4-build-with-ai.jpg",
+    "blurb": "Built and demoed an AI-powered project at InnovateX 4.0's flagship 'Build with AI' track, part of a four-day international tech fest bringing together student innovators and industry mentors."
+  },
+  {
+    "id": "itel-build-club",
+    "title": "ITEL Build Club — Hands-on Workshop",
+    "issuer": "Presidency Makerspace x ITEL Foundation",
+    "date": "10–11 Aug 2026",
+    "category": "AI & Tech",
+    "image": "/images/certificates/itel-build-club.jpg",
+    "blurb": "Took part in a two-day hands-on prototyping workshop at Presidency Makerspace, building projects across multiple domains under the ITEL Build Club launch program."
+  },
+  {
+    "id": "quizoff-2026",
+    "title": "QuizOff 2026 — India's Biggest AI Quiz",
+    "issuer": "CampusCrew, hosted on Unstop",
+    "date": "19 Jul 2026",
+    "category": "AI & Tech",
+    "image": "/images/certificates/quizoff-2026-ai-quiz.jpg",
+    "blurb": "Competed in India's largest AI quiz, held on Unstop with 525,000+ students from 48,500+ institutions nationwide — tested applied and conceptual knowledge of artificial intelligence at national scale."
+  },
+  {
+    "id": "presidency-green-gift",
+    "title": "The Green Gift — Plantation Drive",
+    "issuer": "Presidency University, Environmental Cell",
+    "date": "15 Nov 2024",
+    "category": "Community",
+    "image": "/images/certificates/presidency-green-gift.jpg",
+    "blurb": "Participated in a campus-wide plantation drive organized by the Environmental Cell, contributing to sustainability initiatives at Presidency University's School of Engineering."
+  },
+  {
+    "id": "yogandhra-2025",
+    "title": "Yogandhra 2025 — 11th International Day of Yoga",
+    "issuer": "Department of AYUSH, Government of Andhra Pradesh",
+    "date": "18 Jun 2025",
+    "category": "Community",
+    "image": "/images/certificates/yogandhra-2025.jpg",
+    "blurb": "Completed the Common Yoga Protocol citizen training program for International Day of Yoga 2025, a statewide wellness initiative by the Government of Andhra Pradesh."
+  }
+]

@@ -133,6 +133,22 @@ export function HeaderHUD() {
               Skills Circuit
             </button>
             <button
+              onClick={() => scrollTo("certifications")}
+              style={{
+                background: "none",
+                border: "none",
+                color: "var(--text-secondary)",
+                fontSize: "0.85rem",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+            >
+              Certifications
+            </button>
+            <button
               onClick={() => scrollTo("projects-bento")}
               style={{
                 background: "none",

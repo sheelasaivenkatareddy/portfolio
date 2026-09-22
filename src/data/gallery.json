@@ -1,0 +1,27 @@
+[
+  {
+    "id": "aws-summit-01",
+    "image": "/images/gallery/aws-summit-01.jpg",
+    "caption": "AWS Summit 2026 — exploring the latest in cloud and AI infrastructure"
+  },
+  {
+    "id": "aws-summit-03",
+    "image": "/images/gallery/aws-summit-03.jpg",
+    "caption": "On the ground at AWS Summit 2026"
+  },
+  {
+    "id": "aws-summit-02",
+    "image": "/images/gallery/aws-summit-02.jpg",
+    "caption": "AWS Summit 2026 — booth walkthroughs and dev tooling demos"
+  },
+  {
+    "id": "startup-safari-03",
+    "image": "/images/gallery/startup-safari-03.jpg",
+    "caption": "Startup Safari 2.0 — registration and networking"
+  },
+  {
+    "id": "startup-safari-02",
+    "image": "/images/gallery/startup-safari-02.jpg",
+    "caption": "Startup Safari 2.0 — with the organizing team"
+  }
+]

@@ -42,6 +42,35 @@ export function HeroSection() {
       }}
     >
       <div className="section-container" style={{ width: "100%", textAlign: "center" }}>
+        {/* Profile Photo */}
+        <div
+          data-reveal
+          style={{
+            width: "132px",
+            height: "132px",
+            margin: "0 auto 1.75rem",
+            borderRadius: "var(--radius-full)",
+            padding: "3px",
+            background: "linear-gradient(135deg, #ff6a3d 0%, #e8c872 100%)",
+            boxShadow: "0 0 32px rgba(255, 106, 61, 0.25)",
+          }}
+        >
+          <img
+            src={profileData.photo}
+            alt={profileData.name}
+            width={126}
+            height={126}
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "var(--radius-full)",
+              objectFit: "cover",
+              display: "block",
+              border: "3px solid var(--bg-primary)",
+            }}
+          />
+        </div>
+
         {/* Role badge */}
         <div
           data-reveal

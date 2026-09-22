@@ -8,6 +8,7 @@ import { HeaderHUD } from "./components/common/HeaderHUD";
 import { HeroSection } from "./components/sections/Hero/HeroSection";
 import { ExperienceTimeline } from "./components/sections/Experience/ExperienceTimeline";
 import { SkillsCircuit } from "./components/sections/Skills/SkillsCircuit";
+import { CertificationsWall } from "./components/sections/Certifications/CertificationsWall";
 import { ProjectsBento } from "./components/sections/Projects/ProjectsBento";
 import { GitHubTelemetry } from "./components/sections/Telemetry/GitHubTelemetry";
 import { ContactOutro } from "./components/sections/Contact/ContactOutro";
@@ -45,6 +46,9 @@ export default function App() {
 
         {/* Dynamic SVG Path Circuit Skills Matrix */}
         <SkillsCircuit />
+
+        {/* Certifications, Workshops & Event Gallery */}
+        <CertificationsWall />
 
         {/* Morphing Bento Grid with Interactive Case Studies */}
         <ProjectsBento />
