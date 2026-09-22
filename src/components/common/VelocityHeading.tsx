@@ -56,7 +56,7 @@ export function VelocityHeading({
         {highlight && (
           <span
             style={{
-              background: "linear-gradient(135deg, #ff6a3d 0%, #e8c872 50%, #d9a05b 100%)",
+              background: "linear-gradient(135deg, #ccff00 0%, #eaff8a 50%, #8fd400 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

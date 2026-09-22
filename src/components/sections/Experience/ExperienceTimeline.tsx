@@ -9,7 +9,7 @@ export function ExperienceTimeline() {
       className="section-spacer"
       style={{
         position: "relative",
-        background: "radial-gradient(ellipse at 50% 50%, rgba(28, 24, 20, 0.6) 0%, #0e0d0c 100%)",
+        background: "radial-gradient(ellipse at 50% 50%, rgba(24, 24, 24, 0.6) 0%, #0a0a0a 100%)",
       }}
     >
       <div className="section-container" style={{ width: "100%", marginBottom: "1.5rem" }}>
@@ -40,8 +40,8 @@ export function ExperienceTimeline() {
               style={{
                 padding: "2.5rem",
                 borderRadius: "var(--radius-xl)",
-                background: "rgba(23, 21, 19, 0.88)",
-                border: "1px solid rgba(42, 38, 34, 0.9)",
+                background: "rgba(20, 20, 20, 0.88)",
+                border: "1px solid rgba(38, 38, 38, 0.9)",
                 boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
                 display: "flex",
                 flexDirection: "column",
@@ -59,8 +59,8 @@ export function ExperienceTimeline() {
                   height: "2px",
                   background:
                     idx === 0
-                      ? "linear-gradient(90deg, #ff6a3d, #e8c872, transparent)"
-                      : "linear-gradient(90deg, #d9a05b, #c98a5a, transparent)",
+                      ? "linear-gradient(90deg, #ccff00, #eaff8a, transparent)"
+                      : "linear-gradient(90deg, #8fd400, #5c8f00, transparent)",
                 }}
               />
 
@@ -166,7 +166,7 @@ export function ExperienceTimeline() {
                     >
                       <CheckCircle2
                         size={16}
-                        color="#ff6a3d"
+                        color="#ccff00"
                         style={{ flexShrink: 0, marginTop: "0.2rem" }}
                       />
                       <span>{item}</span>
@@ -241,8 +241,8 @@ export function ExperienceTimeline() {
               gridColumn: "1 / -1",
               padding: "2.5rem",
               borderRadius: "var(--radius-xl)",
-              background: "rgba(23, 21, 19, 0.6)",
-              border: "1px dashed rgba(255, 106, 61, 0.3)",
+              background: "rgba(20, 20, 20, 0.6)",
+              border: "1px dashed rgba(204, 255, 0, 0.3)",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -250,7 +250,7 @@ export function ExperienceTimeline() {
               textAlign: "center",
             }}
           >
-            <Award size={42} color="#ff6a3d" style={{ marginBottom: "1.25rem" }} />
+            <Award size={42} color="#ccff00" style={{ marginBottom: "1.25rem" }} />
             <h4
               style={{
                 fontSize: "var(--text-lg)",

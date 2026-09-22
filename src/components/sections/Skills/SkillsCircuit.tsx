@@ -54,17 +54,17 @@ export function SkillsCircuit() {
   const getCategoryIcon = (id: string) => {
     switch (id) {
       case "languages":
-        return <Terminal size={20} color="#ff6a3d" />;
+        return <Terminal size={20} color="#ccff00" />;
       case "web-frameworks":
-        return <Cpu size={20} color="#e8c872" />;
+        return <Cpu size={20} color="#eaff8a" />;
       case "databases-cloud":
-        return <Database size={20} color="#d9a05b" />;
+        return <Database size={20} color="#8fd400" />;
       case "tools-ecosystem":
-        return <Wrench size={20} color="#c98a5a" />;
+        return <Wrench size={20} color="#5c8f00" />;
       case "executive-leadership":
-        return <Sparkles size={20} color="#f59e0b" />;
+        return <Sparkles size={20} color="#f5f5f5" />;
       default:
-        return <Cpu size={20} color="#ff6a3d" />;
+        return <Cpu size={20} color="#ccff00" />;
     }
   };
 
@@ -153,13 +153,13 @@ export function SkillsCircuit() {
                       padding: "2rem",
                       borderRadius: "var(--radius-lg)",
                       background: isActive
-                        ? "rgba(23, 21, 19, 0.92)"
-                        : "rgba(14, 13, 12, 0.75)",
+                        ? "rgba(20, 20, 20, 0.92)"
+                        : "rgba(10, 10, 10, 0.75)",
                       border: isActive
-                        ? "1px solid rgba(255, 106, 61, 0.45)"
+                        ? "1px solid rgba(204, 255, 0, 0.45)"
                         : "1px solid var(--border-subtle)",
                       boxShadow: isActive
-                        ? "0 12px 35px rgba(255, 106, 61, 0.15)"
+                        ? "0 12px 35px rgba(204, 255, 0, 0.15)"
                         : "var(--shadow-subtle)",
                       transform: isActive ? "scale(1.01)" : "scale(0.99)",
                       transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -181,9 +181,9 @@ export function SkillsCircuit() {
                             height: "38px",
                             borderRadius: "10px",
                             background: isActive
-                              ? "rgba(255, 106, 61, 0.12)"
+                              ? "rgba(204, 255, 0, 0.12)"
                               : "rgba(255, 255, 255, 0.04)",
-                            border: `1px solid ${isActive ? "rgba(255, 106, 61, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
+                            border: `1px solid ${isActive ? "rgba(204, 255, 0, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -210,7 +210,7 @@ export function SkillsCircuit() {
                           fontFamily: "var(--font-mono)",
                           fontSize: "0.7rem",
                           color: isActive ? "var(--accent)" : "var(--text-muted)",
-                          border: `1px solid ${isActive ? "rgba(255, 106, 61, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
+                          border: `1px solid ${isActive ? "rgba(204, 255, 0, 0.3)" : "rgba(255, 255, 255, 0.08)"}`,
                           padding: "0.2rem 0.55rem",
                           borderRadius: "var(--radius-full)",
                           transition: "color 0.3s",
@@ -238,10 +238,10 @@ export function SkillsCircuit() {
                             padding: "0.4rem 0.85rem",
                             borderRadius: "var(--radius-md)",
                             background: isActive
-                              ? "rgba(255, 106, 61, 0.06)"
+                              ? "rgba(204, 255, 0, 0.06)"
                               : "rgba(255, 255, 255, 0.02)",
                             border: isActive
-                              ? "1px solid rgba(255, 106, 61, 0.2)"
+                              ? "1px solid rgba(204, 255, 0, 0.2)"
                               : "1px solid var(--border-subtle)",
                             fontSize: "var(--text-sm)",
                             fontWeight: 500,

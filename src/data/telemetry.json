@@ -6,10 +6,10 @@
     "publicRepos": "24",
     "primaryLanguage": "TypeScript",
     "languages": [
-      { "name": "TypeScript / React", "percent": 44, "color": "#ff6a3d" },
-      { "name": "Python", "percent": 26, "color": "#e8c872" },
-      { "name": "C / C++ (Embedded)", "percent": 18, "color": "#d9a05b" },
-      { "name": "SQL / Cloud DBs", "percent": 12, "color": "#c98a5a" }
+      { "name": "TypeScript / React", "percent": 44, "color": "#ccff00" },
+      { "name": "Python", "percent": 26, "color": "#eaff8a" },
+      { "name": "C / C++ (Embedded)", "percent": 18, "color": "#8fd400" },
+      { "name": "SQL / Cloud DBs", "percent": 12, "color": "#5c8f00" }
     ],
     "activity": [
       { "week": "W1", "commits": 18 },

@@ -21,9 +21,9 @@ export function HeaderHUD() {
           left: 0,
           width: `${progress * 100}%`,
           height: "3px",
-          background: "linear-gradient(90deg, #ff6a3d, #e8c872, #d9a05b)",
+          background: "linear-gradient(90deg, #ccff00, #eaff8a, #8fd400)",
           zIndex: 100,
-          boxShadow: "0 0 12px rgba(255, 106, 61, 0.8)",
+          boxShadow: "0 0 12px rgba(204, 255, 0, 0.8)",
           transition: "width 0.05s linear",
         }}
       />
@@ -48,7 +48,7 @@ export function HeaderHUD() {
             justifyContent: "space-between",
             padding: "0.75rem 1.5rem",
             borderRadius: "var(--radius-full)",
-            background: "rgba(14, 13, 12, 0.82)",
+            background: "rgba(10, 10, 10, 0.82)",
             border: "1px solid rgba(255, 255, 255, 0.1)",
           }}
         >
@@ -62,14 +62,14 @@ export function HeaderHUD() {
                 width: "32px",
                 height: "32px",
                 borderRadius: "50%",
-                background: "linear-gradient(135deg, #ff6a3d, #c2410c)",
+                background: "linear-gradient(135deg, #ccff00, #3d5c00)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#0e0d0c",
+                color: "#0a0a0a",
                 fontWeight: 800,
                 fontSize: "0.85rem",
-                boxShadow: "0 0 12px rgba(255, 106, 61, 0.4)",
+                boxShadow: "0 0 12px rgba(204, 255, 0, 0.4)",
               }}
             >
               SR

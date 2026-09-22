@@ -72,7 +72,7 @@ export function ProjectsBento() {
                     left: "2rem",
                     right: "2rem",
                     height: "1px",
-                    background: "linear-gradient(90deg, transparent, #ff6a3d, transparent)",
+                    background: "linear-gradient(90deg, transparent, #ccff00, transparent)",
                     opacity: 0.7,
                   }}
                 />
@@ -223,7 +223,7 @@ export function ProjectsBento() {
             alignItems: "center",
             justifyContent: "center",
             padding: "1.5rem",
-            background: "rgba(14, 13, 12, 0.88)",
+            background: "rgba(10, 10, 10, 0.88)",
             backdropFilter: "blur(24px)",
             WebkitBackdropFilter: "blur(24px)",
           }}
@@ -238,8 +238,8 @@ export function ProjectsBento() {
               overflowY: "auto",
               padding: "2.5rem",
               borderRadius: "var(--radius-xl)",
-              background: "#171513",
-              border: "1px solid rgba(255, 106, 61, 0.3)",
+              background: "#141414",
+              border: "1px solid rgba(204, 255, 0, 0.3)",
               boxShadow: "0 25px 60px rgba(0, 0, 0, 0.8)",
               position: "relative",
             }}
@@ -315,8 +315,8 @@ export function ProjectsBento() {
                 style={{
                   padding: "1.5rem",
                   borderRadius: "var(--radius-lg)",
-                  background: "rgba(255, 106, 61, 0.03)",
-                  border: "1px solid rgba(255, 106, 61, 0.15)",
+                  background: "rgba(204, 255, 0, 0.03)",
+                  border: "1px solid rgba(204, 255, 0, 0.15)",
                 }}
               >
                 <div
@@ -360,7 +360,7 @@ export function ProjectsBento() {
                     marginBottom: "0.5rem",
                   }}
                 >
-                  <Sparkles size={16} color="#e8c872" /> Engineering Breakthroughs
+                  <Sparkles size={16} color="#eaff8a" /> Engineering Breakthroughs
                 </div>
                 <p style={{ fontSize: "var(--text-sm)", color: "var(--text-secondary)", lineHeight: 1.6 }}>
                   {activeProject.caseStudy.breakthroughs}
@@ -394,7 +394,7 @@ export function ProjectsBento() {
                       color: "var(--text-primary)",
                     }}
                   >
-                    <CheckCircle2 size={16} color="#ff6a3d" />
+                    <CheckCircle2 size={16} color="#ccff00" />
                     <span>{item}</span>
                   </div>
                 ))}

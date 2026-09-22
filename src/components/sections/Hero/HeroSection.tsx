@@ -51,8 +51,8 @@ export function HeroSection() {
             margin: "0 auto 1.75rem",
             borderRadius: "var(--radius-full)",
             padding: "3px",
-            background: "linear-gradient(135deg, #ff6a3d 0%, #e8c872 100%)",
-            boxShadow: "0 0 32px rgba(255, 106, 61, 0.25)",
+            background: "linear-gradient(135deg, #ccff00 0%, #eaff8a 100%)",
+            boxShadow: "0 0 32px rgba(204, 255, 0, 0.25)",
           }}
         >
           <img
@@ -80,9 +80,9 @@ export function HeroSection() {
             gap: "0.6rem",
             padding: "0.5rem 1.25rem",
             borderRadius: "var(--radius-full)",
-            background: "rgba(255, 106, 61, 0.06)",
-            border: "1px solid rgba(255, 106, 61, 0.3)",
-            boxShadow: "0 0 20px rgba(255, 106, 61, 0.15)",
+            background: "rgba(204, 255, 0, 0.06)",
+            border: "1px solid rgba(204, 255, 0, 0.3)",
+            boxShadow: "0 0 20px rgba(204, 255, 0, 0.15)",
             marginBottom: "1.75rem",
           }}
         >
@@ -198,7 +198,7 @@ export function HeroSection() {
                   transform: "translateX(-50%)",
                   width: "40%",
                   height: "1px",
-                  background: "linear-gradient(90deg, transparent, #ff6a3d, transparent)",
+                  background: "linear-gradient(90deg, transparent, #ccff00, transparent)",
                 }}
               />
               <div

@@ -58,23 +58,63 @@ html.lenis, html.lenis body {
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2622;
+  background: #262626;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
 
-/* Fixed WebGL Background Canvas */
-#webgl-canvas-container {
+/* Fixed Poster-Style Background: halftone grid + drifting accent blobs */
+#bg-field-container {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.85;
-  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.bg-halftone {
+  position: absolute;
+  inset: -2px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1.3px);
+  background-size: 26px 26px;
+  opacity: 0.6;
+}
+
+.bg-blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 56vw;
+  height: 56vw;
+  max-width: 720px;
+  max-height: 720px;
+  margin: -28vw 0 0 -28vw;
+  border-radius: 50%;
+  filter: blur(110px);
+  will-change: transform;
+}
+
+.bg-blob-a {
+  background: radial-gradient(circle, rgba(204, 255, 0, 0.16) 0%, transparent 70%);
+}
+
+.bg-blob-b {
+  width: 40vw;
+  height: 40vw;
+  max-width: 520px;
+  max-height: 520px;
+  margin: -20vw 0 0 -20vw;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+}
+
+@media (pointer: coarse) {
+  .bg-blob {
+    filter: blur(70px);
+  }
 }
 
 /* Content Master Wrapper */
@@ -142,14 +182,14 @@ html.lenis, html.lenis body {
 
 .circuit-path {
   fill: none;
-  stroke: rgba(255, 106, 61, 0.55);
+  stroke: rgba(204, 255, 0, 0.55);
   stroke-width: 2.5;
   stroke-linecap: round;
 }
 
 .circuit-path-bg {
   fill: none;
-  stroke: rgba(42, 38, 34, 0.6);
+  stroke: rgba(38, 38, 38, 0.6);
   stroke-width: 2;
   stroke-linecap: round;
 }
@@ -166,8 +206,8 @@ html.lenis, html.lenis body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: var(--radius-full);
-  background: rgba(255, 106, 61, 0.08);
-  border: 1px solid rgba(255, 106, 61, 0.25);
+  background: rgba(204, 255, 0, 0.08);
+  border: 1px solid rgba(204, 255, 0, 0.25);
   color: var(--accent);
 }
 
@@ -197,18 +237,18 @@ html.lenis, html.lenis body {
   font-weight: 600;
   letter-spacing: 0.02em;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #ff6a3d 0%, #e8501f 100%);
-  color: #0e0d0c;
+  background: linear-gradient(135deg, #ccff00 0%, #8fd400 100%);
+  color: #0a0a0a;
   border: none;
   cursor: pointer;
   text-decoration: none;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 4px 18px rgba(255, 106, 61, 0.35);
+  box-shadow: 0 4px 18px rgba(204, 255, 0, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(255, 106, 61, 0.55);
+  box-shadow: 0 8px 28px rgba(204, 255, 0, 0.55);
 }
 
 .btn-secondary {

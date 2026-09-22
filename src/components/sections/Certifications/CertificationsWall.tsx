@@ -43,8 +43,8 @@ export function CertificationsWall() {
               textDecoration: "none",
               color: "inherit",
               marginBottom: "3.5rem",
-              border: "1px solid rgba(232, 200, 114, 0.35)",
-              boxShadow: "0 0 40px rgba(232, 200, 114, 0.12)",
+              border: "1px solid rgba(234, 255, 138, 0.35)",
+              boxShadow: "0 0 40px rgba(234, 255, 138, 0.12)",
             }}
           >
             <div style={{ position: "relative", minHeight: "260px", overflow: "hidden" }}>
@@ -57,7 +57,7 @@ export function CertificationsWall() {
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background: "linear-gradient(90deg, transparent 55%, rgba(14,13,12,0.55) 100%)",
+                  background: "linear-gradient(90deg, transparent 55%, rgba(10, 10, 10,0.55) 100%)",
                 }}
               />
             </div>
@@ -78,8 +78,8 @@ export function CertificationsWall() {
                   alignSelf: "flex-start",
                   padding: "0.35rem 0.85rem",
                   borderRadius: "var(--radius-full)",
-                  background: "rgba(232, 200, 114, 0.12)",
-                  border: "1px solid rgba(232, 200, 114, 0.4)",
+                  background: "rgba(234, 255, 138, 0.12)",
+                  border: "1px solid rgba(234, 255, 138, 0.4)",
                   color: "var(--accent-secondary)",
                   fontFamily: "var(--font-mono)",
                   fontSize: "var(--text-xs)",
@@ -210,11 +210,11 @@ export function CertificationsWall() {
                         width: "28px",
                         height: "28px",
                         borderRadius: "var(--radius-full)",
-                        background: "rgba(14, 13, 12, 0.75)",
+                        background: "rgba(10, 10, 10, 0.75)",
                         border: "1px solid rgba(255, 255, 255, 0.12)",
                       }}
                     >
-                      <ExternalLink size={13} color="#f5f1ea" />
+                      <ExternalLink size={13} color="#f5f5f5" />
                     </span>
                   </div>
 
@@ -336,7 +336,7 @@ export function CertificationsWall() {
                     position: "absolute",
                     inset: "auto 0 0 0",
                     padding: "1.75rem 0.9rem 0.75rem",
-                    background: "linear-gradient(0deg, rgba(14,13,12,0.92) 0%, transparent 100%)",
+                    background: "linear-gradient(0deg, rgba(10, 10, 10,0.92) 0%, transparent 100%)",
                     fontSize: "0.72rem",
                     color: "var(--text-secondary)",
                     lineHeight: 1.4,

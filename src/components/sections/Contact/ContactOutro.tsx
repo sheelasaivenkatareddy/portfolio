@@ -38,7 +38,7 @@ export function ContactOutro() {
         particleCount: 50,
         spread: 60,
         origin: { y: 0.85 },
-        colors: ["#ff6a3d", "#e8c872", "#d9a05b"],
+        colors: ["#ccff00", "#eaff8a", "#8fd400"],
       });
     } catch {
       // Ignore if confetti fails
@@ -86,7 +86,7 @@ export function ContactOutro() {
               transform: "translateX(-50%)",
               width: "250px",
               height: "100px",
-              background: "radial-gradient(ellipse at center, rgba(255, 106, 61, 0.35) 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, rgba(204, 255, 0, 0.35) 0%, transparent 70%)",
               pointerEvents: "none",
             }}
           />
@@ -124,8 +124,8 @@ export function ContactOutro() {
               padding: "0.85rem 1.75rem",
               borderRadius: "var(--radius-full)",
               background: "rgba(0, 0, 0, 0.45)",
-              border: "1px solid rgba(255, 106, 61, 0.35)",
-              boxShadow: "0 0 25px rgba(255, 106, 61, 0.15)",
+              border: "1px solid rgba(204, 255, 0, 0.35)",
+              boxShadow: "0 0 25px rgba(204, 255, 0, 0.15)",
               cursor: "pointer",
               transition: "all 0.25s ease",
               marginBottom: "2.5rem",
@@ -138,11 +138,11 @@ export function ContactOutro() {
               e.currentTarget.style.transform = "scale(1.02)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "rgba(255, 106, 61, 0.35)";
+              e.currentTarget.style.borderColor = "rgba(204, 255, 0, 0.35)";
               e.currentTarget.style.transform = "scale(1)";
             }}
           >
-            <Mail size={18} color="#ff6a3d" />
+            <Mail size={18} color="#ccff00" />
             <span
               style={{
                 fontFamily: "var(--font-mono)",
@@ -194,7 +194,7 @@ export function ContactOutro() {
               rel="noopener noreferrer"
               className="btn-secondary"
             >
-              <LinkedinIcon color="#ff6a3d" />
+              <LinkedinIcon color="#ccff00" />
               <span>Connect on LinkedIn</span>
             </a>
 
@@ -234,12 +234,12 @@ export function ContactOutro() {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <MapPin size={13} color="#ff6a3d" />
+              <MapPin size={13} color="#ccff00" />
               <span>{profileData.location}</span>
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <Clock size={13} color="#ff6a3d" />
+              <Clock size={13} color="#ccff00" />
               <span>LOCAL TIME: {localTime || "IST (UTC+5:30)"}</span>
             </div>
           </div>
