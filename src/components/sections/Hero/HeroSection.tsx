@@ -3,7 +3,7 @@ import gsap from "gsap";
 import profileData from "../../../data/profile.json";
 import { CountUp } from "../../common/CountUp";
 import { useMagnetic } from "../../../hooks/useMagnetic";
-import { ArrowDown, MapPin, Sparkles } from "lucide-react";
+import { ArrowDown, MapPin, Sparkles, Trophy } from "lucide-react";
 
 export function HeroSection() {
   const rootRef = useRef<HTMLElement>(null);
@@ -256,6 +256,32 @@ export function HeroSection() {
           <span style={{ color: "var(--border-subtle)" }}>|</span>
           <span style={{ color: "var(--accent-emerald)", fontWeight: 600 }}>{profileData.status}</span>
         </div>
+
+        {/* Startup Safari 2.0 — 2nd Prize highlight */}
+        <button
+          data-reveal
+          onClick={() => scrollTo("certifications")}
+          style={{
+            display: "flex",
+            marginTop: "1rem",
+            marginInline: "auto",
+            alignItems: "center",
+            gap: "0.6rem",
+            padding: "0.4rem 1rem",
+            borderRadius: "var(--radius-full)",
+            background: "rgba(234, 255, 138, 0.08)",
+            border: "1px solid rgba(234, 255, 138, 0.35)",
+            fontSize: "var(--text-xs)",
+            color: "var(--accent-secondary)",
+            fontFamily: "var(--font-mono)",
+            fontWeight: 600,
+            letterSpacing: "0.04em",
+            cursor: "pointer",
+          }}
+        >
+          <Trophy size={13} />
+          2nd Prize — Startup Safari 2.0
+        </button>
       </div>
     </section>
   );
