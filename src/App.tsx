@@ -1,5 +1,7 @@
 import { useLenis } from "./hooks/useLenis";
 import { useScrollReveal } from "./hooks/useScrollReveal";
+import { useIsMobile } from "./hooks/useIsMobile";
+import { MobileApp } from "./components/mobile/MobileApp";
 import PosterField from "./components/canvas/PosterField";
 import { HeaderHUD } from "./components/common/HeaderHUD";
 import { HeroSection } from "./components/sections/Hero/HeroSection";
@@ -7,10 +9,16 @@ import { ExperienceTimeline } from "./components/sections/Experience/ExperienceT
 import { SkillsCircuit } from "./components/sections/Skills/SkillsCircuit";
 import { CertificationsWall } from "./components/sections/Certifications/CertificationsWall";
 import { ProjectsBento } from "./components/sections/Projects/ProjectsBento";
+import { FounderTerminal } from "./components/sections/Terminal/FounderTerminal";
 import { GitHubTelemetry } from "./components/sections/Telemetry/GitHubTelemetry";
 import { ContactOutro } from "./components/sections/Contact/ContactOutro";
 
 export default function App() {
+  // Phones and small tablets get an app-style shell (tabs + bottom bar) instead of the long page.
+  return useIsMobile() ? <MobileApp /> : <DesktopSite />;
+}
+
+function DesktopSite() {
   // Initialize Lenis smooth scroll engine
   useLenis();
   useScrollReveal();
@@ -38,6 +46,9 @@ export default function App() {
 
         {/* Morphing Bento Grid with Interactive Case Studies */}
         <ProjectsBento />
+
+        {/* Keyboard-first command shell over the portfolio data */}
+        <FounderTerminal />
 
         {/* Real-time GitHub & Systems Telemetry */}
         <GitHubTelemetry />

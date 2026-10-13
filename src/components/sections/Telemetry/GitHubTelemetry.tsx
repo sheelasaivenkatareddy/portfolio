@@ -17,7 +17,7 @@ export function GitHubTelemetry() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(340px, 100%), 1fr))",
             gap: "1.75rem",
           }}
         >
@@ -38,6 +38,8 @@ export function GitHubTelemetry() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
+                  flexWrap: "wrap",
+                  gap: "0.75rem",
                   marginBottom: "1.5rem",
                 }}
               >

@@ -4,6 +4,7 @@ import profileData from "../../../data/profile.json";
 import { CountUp } from "../../common/CountUp";
 import { useMagnetic } from "../../../hooks/useMagnetic";
 import { ArrowDown, MapPin, Sparkles, Trophy } from "lucide-react";
+import { goToSection } from "../../../core/navigate";
 
 export function HeroSection() {
   const rootRef = useRef<HTMLElement>(null);
@@ -26,10 +27,7 @@ export function HeroSection() {
     return () => ctx.revert();
   }, []);
 
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  const scrollTo = goToSection;
 
   return (
     <section
@@ -181,7 +179,7 @@ export function HeroSection() {
           data-reveal
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(220px, 100%), 1fr))",
             gap: "1.25rem",
             maxWidth: "560px",
             margin: "0 auto",

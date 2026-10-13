@@ -3,6 +3,15 @@ import { useScrollProgress } from "../../hooks/useScrollProgress";
 import { useMagnetic } from "../../hooks/useMagnetic";
 import { ArrowUpRight } from "lucide-react";
 
+const NAV = [
+  { id: "experience-section", label: "Experience" },
+  { id: "skills-circuit", label: "Skills Circuit" },
+  { id: "certifications", label: "Certifications" },
+  { id: "projects-bento", label: "Ventures & Projects" },
+  { id: "founder-terminal", label: "Terminal" },
+  { id: "telemetry-section", label: "Telemetry" },
+];
+
 export function HeaderHUD() {
   const progress = useScrollProgress();
   const connectRef = useRef<HTMLButtonElement>(null);
@@ -104,91 +113,37 @@ export function HeaderHUD() {
             }}
             className="nav-desktop"
           >
-            <button
-              onClick={() => scrollTo("experience-section")}
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--text-secondary)",
-                fontSize: "0.85rem",
-                fontWeight: 500,
-                cursor: "pointer",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-            >
-              Experience
-            </button>
-            <button
-              onClick={() => scrollTo("skills-circuit")}
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--text-secondary)",
-                fontSize: "0.85rem",
-                fontWeight: 500,
-                cursor: "pointer",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-            >
-              Skills Circuit
-            </button>
-            <button
-              onClick={() => scrollTo("certifications")}
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--text-secondary)",
-                fontSize: "0.85rem",
-                fontWeight: 500,
-                cursor: "pointer",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-            >
-              Certifications
-            </button>
-            <button
-              onClick={() => scrollTo("projects-bento")}
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--text-secondary)",
-                fontSize: "0.85rem",
-                fontWeight: 500,
-                cursor: "pointer",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-            >
-              Ventures & Projects
-            </button>
-            <button
-              onClick={() => scrollTo("telemetry-section")}
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--text-secondary)",
-                fontSize: "0.85rem",
-                fontWeight: 500,
-                cursor: "pointer",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-            >
-              Telemetry
-            </button>
+            {NAV.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollTo(item.id)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  color: "var(--text-secondary)",
+                  fontSize: "0.85rem",
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  transition: "color 0.2s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+              >
+                {item.label}
+                {item.id === "founder-terminal" && (
+                  <>
+                    {" "}
+                    <kbd style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", padding: "0.05rem 0.35rem", border: "1px solid var(--border-subtle)", borderRadius: "4px", color: "var(--text-muted)" }}>/</kbd>
+                  </>
+                )}
+              </button>
+            ))}
           </nav>
 
           {/* Live Status & CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <div
+              className="nav-desktop"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -226,8 +181,10 @@ export function HeaderHUD() {
             >
               Connect <ArrowUpRight size={14} />
             </button>
+
           </div>
         </div>
+
       </header>
     </>
   );
