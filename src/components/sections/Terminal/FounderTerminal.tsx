@@ -6,6 +6,7 @@ import projects from "../../../data/projects.json";
 import skills from "../../../data/skills.json";
 import certifications from "../../../data/certifications.json";
 import { VelocityHeading } from "../../common/VelocityHeading";
+import { goToSection } from "../../../core/navigate";
 
 /**
  * Founder Terminal — the portfolio's signature interaction. Visitors explore the same
@@ -147,7 +148,7 @@ function run(raw: string): Line[] | "clear" {
       if (!id) {
         return [{ kind: "err", body: `goto: unknown section "${arg}". try: ${Object.keys(SECTIONS).join(", ")}` }];
       }
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      goToSection(id);
       return [{ kind: "out", body: muted(`→ jumping to ${key}…`) }];
     }
     case "sudo":

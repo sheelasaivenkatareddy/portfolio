@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useScrollProgress } from "../../hooks/useScrollProgress";
 import { useMagnetic } from "../../hooks/useMagnetic";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const NAV = [
   { id: "experience-section", label: "Experience" },
@@ -17,24 +17,7 @@ export function HeaderHUD() {
   const connectRef = useRef<HTMLButtonElement>(null);
   useMagnetic(connectRef, 0.35);
 
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  // Close the mobile menu on Escape or when the viewport grows past the breakpoint.
-  useEffect(() => {
-    if (!menuOpen) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
-    const mq = window.matchMedia("(min-width: 901px)");
-    const onMq = () => mq.matches && setMenuOpen(false);
-    window.addEventListener("keydown", onKey);
-    mq.addEventListener("change", onMq);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      mq.removeEventListener("change", onMq);
-    };
-  }, [menuOpen]);
-
   const scrollTo = (id: string) => {
-    setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
@@ -199,32 +182,9 @@ export function HeaderHUD() {
               Connect <ArrowUpRight size={14} />
             </button>
 
-            <button
-              type="button"
-              className="nav-mobile-toggle"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={menuOpen}
-              aria-controls="mobile-menu"
-              onClick={() => setMenuOpen((o) => !o)}
-            >
-              {menuOpen ? <X size={18} /> : <Menu size={18} />}
-            </button>
           </div>
         </div>
 
-        {menuOpen && (
-          <nav id="mobile-menu" className="glass-panel mobile-menu" aria-label="Sections">
-            {NAV.map((item) => (
-              <button key={item.id} type="button" onClick={() => scrollTo(item.id)}>
-                {item.label}
-                <ArrowUpRight size={16} />
-              </button>
-            ))}
-            <button type="button" onClick={() => scrollTo("contact-section")} className="btn-primary">
-              Connect <ArrowUpRight size={14} />
-            </button>
-          </nav>
-        )}
       </header>
     </>
   );

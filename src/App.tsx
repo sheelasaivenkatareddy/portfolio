@@ -1,5 +1,7 @@
 import { useLenis } from "./hooks/useLenis";
 import { useScrollReveal } from "./hooks/useScrollReveal";
+import { useIsMobile } from "./hooks/useIsMobile";
+import { MobileApp } from "./components/mobile/MobileApp";
 import PosterField from "./components/canvas/PosterField";
 import { HeaderHUD } from "./components/common/HeaderHUD";
 import { HeroSection } from "./components/sections/Hero/HeroSection";
@@ -12,6 +14,11 @@ import { GitHubTelemetry } from "./components/sections/Telemetry/GitHubTelemetry
 import { ContactOutro } from "./components/sections/Contact/ContactOutro";
 
 export default function App() {
+  // Phones and small tablets get an app-style shell (tabs + bottom bar) instead of the long page.
+  return useIsMobile() ? <MobileApp /> : <DesktopSite />;
+}
+
+function DesktopSite() {
   // Initialize Lenis smooth scroll engine
   useLenis();
   useScrollReveal();
