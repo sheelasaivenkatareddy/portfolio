@@ -169,6 +169,23 @@ export function HeaderHUD() {
               Ventures & Projects
             </button>
             <button
+              onClick={() => scrollTo("founder-terminal")}
+              style={{
+                background: "none",
+                border: "none",
+                color: "var(--text-secondary)",
+                fontSize: "0.85rem",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+            >
+              Terminal{" "}
+              <kbd style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", padding: "0.05rem 0.35rem", border: "1px solid var(--border-subtle)", borderRadius: "4px", color: "var(--text-muted)" }}>/</kbd>
+            </button>
+            <button
               onClick={() => scrollTo("telemetry-section")}
               style={{
                 background: "none",
@@ -189,6 +206,7 @@ export function HeaderHUD() {
           {/* Live Status & CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <div
+              className="nav-desktop"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

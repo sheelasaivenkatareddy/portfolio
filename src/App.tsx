@@ -7,6 +7,7 @@ import { ExperienceTimeline } from "./components/sections/Experience/ExperienceT
 import { SkillsCircuit } from "./components/sections/Skills/SkillsCircuit";
 import { CertificationsWall } from "./components/sections/Certifications/CertificationsWall";
 import { ProjectsBento } from "./components/sections/Projects/ProjectsBento";
+import { FounderTerminal } from "./components/sections/Terminal/FounderTerminal";
 import { GitHubTelemetry } from "./components/sections/Telemetry/GitHubTelemetry";
 import { ContactOutro } from "./components/sections/Contact/ContactOutro";
 
@@ -38,6 +39,9 @@ export default function App() {
 
         {/* Morphing Bento Grid with Interactive Case Studies */}
         <ProjectsBento />
+
+        {/* Keyboard-first command shell over the portfolio data */}
+        <FounderTerminal />
 
         {/* Real-time GitHub & Systems Telemetry */}
         <GitHubTelemetry />
