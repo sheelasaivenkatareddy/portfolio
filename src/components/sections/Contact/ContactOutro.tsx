@@ -152,6 +152,8 @@ export function ContactOutro() {
                 fontSize: "var(--text-sm)",
                 color: "#ffffff",
                 fontWeight: 600,
+                minWidth: 0,
+                overflowWrap: "anywhere",
               }}
             >
               {profileData.email}

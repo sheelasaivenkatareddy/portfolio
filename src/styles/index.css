@@ -340,3 +340,87 @@ html.lenis, html.lenis body {
     display: none !important;
   }
 }
+
+/* ---- Mobile header menu ---- */
+.nav-mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.mobile-menu {
+  margin-top: 0.6rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-lg);
+  background: rgba(10, 10, 10, 0.94);
+  display: flex;
+  flex-direction: column;
+  animation: menu-drop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu > button:not(.btn-primary) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px; /* comfortable touch target */
+  padding: 0 1rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-menu > button:not(.btn-primary) svg {
+  color: var(--accent);
+}
+
+.mobile-menu > .btn-primary {
+  margin: 0.75rem 0.25rem 0.25rem;
+  justify-content: center;
+  min-height: 46px;
+}
+
+@keyframes menu-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-mobile-toggle {
+    display: inline-flex;
+  }
+}
+
+/* Hide the header Connect pill on very small phones; it lives in the menu instead */
+@media (max-width: 420px) {
+  header .btn-primary:not(.mobile-menu .btn-primary) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu {
+    animation: none;
+  }
+}
+
+/* iOS zooms into inputs under 16px — keep the terminal prompt at 16px on phones */
+@media (max-width: 900px) {
+  #founder-terminal input {
+    font-size: 16px;
+  }
+}
